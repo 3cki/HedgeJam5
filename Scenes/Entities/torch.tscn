@@ -19,7 +19,9 @@ texture = SubResource("AtlasTexture_nbb74")
 shape = SubResource("RectangleShape2D_vpsfl")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.976471, 0.976471, 0.803922, 1)
+energy = 1.5
 range_item_cull_mask = 3
 shadow_enabled = true
 texture = ExtResource("2_tsgq3")
-texture_scale = 0.5
+texture_scale = 0.3
