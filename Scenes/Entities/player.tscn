@@ -8,12 +8,13 @@ atlas = ExtResource("1_nooih")
 region = Rect2(16, 128, 16, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5kjm4"]
+size = Vector2(16, 15)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_cma62"]
 cull_mode = 1
 polygon = PackedVector2Array(4, -7, -4, -7, -4, -6, -5, -4, -6, -4, -6, 3, -7, 7, -7, 8, 7, 8, 7, 7, 6, 3, 6, -4, 5, -4, 4, -6)
 
-[node name="Player" type="Area2D"]
+[node name="Player" type="CharacterBody2D"]
 scale = Vector2(5, 5)
 script = ExtResource("1_6iyn6")
 
@@ -22,6 +23,8 @@ texture_filter = 1
 texture = SubResource("AtlasTexture_mhxsi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.86102e-07, 0.499999)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_5kjm4")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]

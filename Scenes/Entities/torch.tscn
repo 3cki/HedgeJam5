@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dgmhtwak34tsn"]
+[gd_scene load_steps=6 format=3 uid="uid://dgmhtwak34tsn"]
 
+[ext_resource type="Script" path="res://Scenes/Entities/torch.gd" id="1_7jbm2"]
 [ext_resource type="Texture2D" uid="uid://2b274mu8t8nv" path="res://Assets/Tilesets/tilemap_packed.png" id="1_tpmvf"]
 [ext_resource type="Texture2D" uid="uid://bx6oebit1m7na" path="res://Assets/lightmask.png" id="2_tsgq3"]
 
@@ -7,16 +8,21 @@
 atlas = ExtResource("1_tpmvf")
 region = Rect2(80, 160, 16, 16)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vpsfl"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_6nhvu"]
+radius = 7.0
 
 [node name="Torch" type="Area2D"]
+collision_layer = 2
+script = ExtResource("1_7jbm2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
+scale = Vector2(5, 5)
 texture = SubResource("AtlasTexture_nbb74")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_vpsfl")
+scale = Vector2(5, 5)
+shape = SubResource("CircleShape2D_6nhvu")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 color = Color(0.976471, 0.976471, 0.803922, 1)
@@ -24,4 +30,7 @@ energy = 1.5
 range_item_cull_mask = 3
 shadow_enabled = true
 texture = ExtResource("2_tsgq3")
-texture_scale = 0.3
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

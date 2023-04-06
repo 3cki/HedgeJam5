@@ -1,4 +1,4 @@
-extends Area2D
+extends CharacterBody2D
 
 @export var tile_size = 16
 @export var speed = 3
@@ -14,6 +14,7 @@ func _ready():
 	tile_size = tile_size * 5
 	position = position.snapped(Vector2.ONE * tile_size)
 	position += Vector2.ONE * tile_size/2
+	add_to_group("player", true)
 
 func _unhandled_input(event):
 	for dir in inputs.keys():
