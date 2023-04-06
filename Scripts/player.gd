@@ -21,7 +21,7 @@ func _unhandled_input(event):
 			move(dir)
 
 func move(dir):
-	ray.target_position = inputs[dir] * tile_size
+	ray.target_position = inputs[dir] * tile_size / 5
 	ray.force_raycast_update()
 	rotate_sprite(dir)
 	if !ray.is_colliding():
