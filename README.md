@@ -1,4 +1,4 @@
-# HedgeJam5
+# HedgeJam 5
 Ecki's game submission to HedgeJam #5
 
 - **Time frame:** 3rd April - 17th April
