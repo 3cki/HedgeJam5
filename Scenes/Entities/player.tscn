@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bi6lls0j7q5yi"]
+
+[ext_resource type="Script" path="res://Scripts/player.gd" id="1_6iyn6"]
+[ext_resource type="Texture2D" uid="uid://2b274mu8t8nv" path="res://Assets/Tilesets/tilemap_packed.png" id="1_nooih"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mhxsi"]
+atlas = ExtResource("1_nooih")
+region = Rect2(16, 128, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5kjm4"]
+size = Vector2(80, 80)
+
+[node name="Player" type="Area2D"]
+script = ExtResource("1_6iyn6")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(5, 5)
+texture = SubResource("AtlasTexture_mhxsi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5kjm4")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
