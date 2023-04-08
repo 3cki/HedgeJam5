@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://dgmhtwak34tsn"]
+
+[ext_resource type="Texture2D" uid="uid://2b274mu8t8nv" path="res://Assets/Tilesets/tilemap_packed.png" id="1_tpmvf"]
+[ext_resource type="Script" path="res://Scripts/torch.gd" id="1_uflte"]
+[ext_resource type="Texture2D" uid="uid://bx6oebit1m7na" path="res://Assets/lightmask.png" id="2_tsgq3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nbb74"]
+atlas = ExtResource("1_tpmvf")
+region = Rect2(80, 160, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qnobk"]
+size = Vector2(15, 15)
+
+[node name="Torch" type="StaticBody2D"]
+script = ExtResource("1_uflte")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(5, 5)
+texture = SubResource("AtlasTexture_nbb74")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_qnobk")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.976471, 0.976471, 0.803922, 1)
+energy = 1.5
+range_item_cull_mask = 3
+shadow_enabled = true
+texture = ExtResource("2_tsgq3")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
