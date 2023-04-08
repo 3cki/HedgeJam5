@@ -30,6 +30,13 @@ func _unhandled_input(event):
 		pick_up_torch()
 
 func move(dir):
+	if picked_up_torch:
+		if abs(torch.position.x - position.x) > abs(torch.position.y - position.y):
+			if inputs[dir] == Vector2.UP || inputs[dir] == Vector2.DOWN:
+				return
+		else:
+			if inputs[dir] == Vector2.LEFT || inputs[dir] == Vector2.RIGHT:
+				return
 	ray.target_position = inputs[dir] * tile_size / 5
 	ray.force_raycast_update()
 	rotate_sprite(dir)
