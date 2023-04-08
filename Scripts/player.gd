@@ -1,7 +1,9 @@
 extends CharacterBody2D
 
+@export var lives = 3
 @export var tile_size = 16
 @export var speed = 3
+@onready var life = preload("res://Scenes/Entities/life.tscn") 
 @onready var ray = $RayCast2D
 var ray_size = 1
 var inputs = {"Walk Right": Vector2.RIGHT, "Walk Left": Vector2.LEFT, "Walk Up": Vector2.UP, "Walk Down": Vector2.DOWN}
@@ -12,12 +14,21 @@ var can_pick_up_torch = false
 var picked_up_torch = false
 var torch_direction = Vector2.ZERO
 var torch_offset = Vector2.ZERO
+var life_group
 
 func _ready():
 	tile_size = tile_size * 5
 	position = position.snapped(Vector2.ONE * tile_size)
 	position += Vector2.ONE * tile_size/2
 	add_to_group("player", true)
+	instantiate_lives()
+
+func instantiate_lives():
+	for i in lives:
+		life_group = get_node("../HUD/Lives")
+		var new_life = life.instantiate()
+		life_group.add_child(new_life)
+		new_life.position = Vector2(48 + i * 84, 48)
 
 func _unhandled_input(event):
 	if tween && tween.is_running():
@@ -109,3 +120,25 @@ func get_torch_direction():
 		position_difference.y = -round(position_difference.y)
 		
 	torch_direction = position_difference.normalized()
+
+func _on_hitbox_area_entered(area):
+	if area.is_in_group("enemy"):
+		hit_by_enemy(area)
+
+func hit_by_enemy(enemy):
+	$CooldownTimer.stop()
+	$Sprite.modulate = Color(1, 0, 0, 1)
+	life_group.get_child(lives).queue_free()
+	lives -= 1
+	if lives <= 0:
+		game_over()
+
+func _on_cooldown_timer_timeout():
+	$Sprite.modulate = Color(1, 1, 1, 1)
+
+func _on_hitbox_area_exited(area):
+	if area.is_in_group("enemy"):
+		$CooldownTimer.start()
+
+func game_over():
+	get_tree().reload_current_scene()
