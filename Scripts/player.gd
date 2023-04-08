@@ -115,4 +115,13 @@ func _on_hitbox_area_entered(area):
 		hit_by_enemy(area)
 
 func hit_by_enemy(enemy):
-	print("Hit by enemy: " + enemy.name)
+	$CooldownTimer.stop()
+	$Sprite.modulate = Color(1, 0, 0, 1)
+
+func _on_cooldown_timer_timeout():
+	$Sprite.modulate = Color(1, 1, 1, 1)
+
+
+func _on_hitbox_area_exited(area):
+	if area.is_in_group("enemy"):
+		$CooldownTimer.start()
