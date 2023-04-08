@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyyea6j4ctuvl"]
+
+[ext_resource type="Texture2D" uid="uid://dapunlkirf0a2" path="res://Assets/Tilesets/tiles_packed.png" id="1_ix1gk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_euwhc"]
+atlas = ExtResource("1_ix1gk")
+region = Rect2(72, 36, 18, 18)
+
+[node name="Life" type="Sprite2D"]
+texture_filter = 1
+position = Vector2(-2.86102e-07, 0.499999)
+scale = Vector2(5, 5)
+texture = SubResource("AtlasTexture_euwhc")

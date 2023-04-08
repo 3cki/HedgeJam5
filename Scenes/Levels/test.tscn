@@ -1,9 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://bf42dca0q613w"]
+[gd_scene load_steps=22 format=3 uid="uid://bf42dca0q613w"]
 
 [ext_resource type="Texture2D" uid="uid://2b274mu8t8nv" path="res://Assets/Tilesets/tilemap_packed.png" id="1_5tiqb"]
 [ext_resource type="PackedScene" uid="uid://cte17l6267ni6" path="res://Scenes/Entities/trap.tscn" id="2_1cpxt"]
 [ext_resource type="PackedScene" uid="uid://bi6lls0j7q5yi" path="res://Scenes/Entities/player.tscn" id="2_3dqlv"]
 [ext_resource type="PackedScene" uid="uid://dgmhtwak34tsn" path="res://Scenes/Entities/torch.tscn" id="3_ce206"]
+[ext_resource type="PackedScene" uid="uid://citgt6p1f4olc" path="res://Scenes/Entities/hud.tscn" id="5_qrojd"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_cywkb"]
 polygon = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
@@ -534,3 +535,5 @@ position = Vector2(440, 210)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0, 0, 0, 1)
+
+[node name="HUD" parent="." instance=ExtResource("5_qrojd")]
