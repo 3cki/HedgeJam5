@@ -109,3 +109,10 @@ func get_torch_direction():
 		position_difference.y = -round(position_difference.y)
 		
 	torch_direction = position_difference.normalized()
+
+func _on_hitbox_area_entered(area):
+	if area.is_in_group("enemy"):
+		hit_by_enemy(area)
+
+func hit_by_enemy(enemy):
+	print("Hit by enemy: " + enemy.name)

@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cte17l6267ni6"]
+
+[ext_resource type="Texture2D" uid="uid://2b274mu8t8nv" path="res://Assets/Tilesets/tilemap_packed.png" id="1_2ev8a"]
+[ext_resource type="Script" path="res://Scripts/trap.gd" id="1_pgcxw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_biort"]
+atlas = ExtResource("1_2ev8a")
+region = Rect2(80, 48, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2355y"]
+size = Vector2(10, 10.2)
+
+[node name="Trap" type="Area2D"]
+scale = Vector2(5, 5)
+script = ExtResource("1_pgcxw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = SubResource("AtlasTexture_biort")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.90735e-07, -0.0999999)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_2355y")
