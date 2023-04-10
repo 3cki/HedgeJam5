@@ -533,6 +533,7 @@ position = Vector2(440, 210)
 
 [node name="Door" parent="." instance=ExtResource("5_j2tab")]
 position = Vector2(1000, 120)
+next_scene = ExtResource("2_1cpxt")
 
 [node name="Player" parent="." instance=ExtResource("2_3dqlv")]
 position = Vector2(120, 210)
