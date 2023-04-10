@@ -15,6 +15,7 @@ cull_mode = 1
 polygon = PackedVector2Array(4, -7, -4, -7, -4, -6, -5, -4, -6, -4, -6, 3, -7, 7, -7, 8, 7, 8, 7, 7, 6, 3, 6, -4, 5, -4, 4, -6)
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 1
 scale = Vector2(5, 5)
 script = ExtResource("1_6iyn6")
 

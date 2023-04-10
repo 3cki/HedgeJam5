@@ -15,6 +15,7 @@ var picked_up_torch = false
 var torch_direction = Vector2.ZERO
 var torch_offset = Vector2.ZERO
 var life_group
+var last_position = Vector2.ZERO
 
 func _ready():
 	tile_size = tile_size * 5
@@ -22,6 +23,7 @@ func _ready():
 	position += Vector2.ONE * tile_size/2
 	add_to_group("player", true)
 	instantiate_lives()
+	last_position = position
 
 func instantiate_lives():
 	for i in lives:
@@ -44,6 +46,7 @@ func move(dir):
 	update_ray(dir)
 	rotate_sprite(dir)
 	if !ray.is_colliding():
+		last_position = position
 		var new_player_position = position + inputs[dir] * tile_size
 		move_tween(new_player_position)
 		move_tween_torch(new_player_position)
@@ -124,6 +127,8 @@ func get_torch_direction():
 func _on_hitbox_area_entered(area):
 	if area.is_in_group("enemy"):
 		hit_by_enemy(area)
+	if area.is_in_group("closed_door"):
+		move_tween(last_position)
 
 func hit_by_enemy(enemy):
 	$CooldownTimer.stop()

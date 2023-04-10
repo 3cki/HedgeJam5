@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://djw8shvp7sbx5"]
+
+[ext_resource type="Script" path="res://Scripts/closed_door.gd" id="1_qcsye"]
+[ext_resource type="Texture2D" uid="uid://2b274mu8t8nv" path="res://Assets/Tilesets/tilemap_packed.png" id="1_rso3e"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tdywt"]
+atlas = ExtResource("1_rso3e")
+region = Rect2(144, 48, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gpman"]
+size = Vector2(16, 16)
+
+[node name="Closed Door" type="Area2D"]
+scale = Vector2(5, 5)
+script = ExtResource("1_qcsye")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = SubResource("AtlasTexture_tdywt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gpman")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
