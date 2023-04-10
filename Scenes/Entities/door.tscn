@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://e5cq3i80moa3"]
+
+[ext_resource type="Texture2D" uid="uid://2b274mu8t8nv" path="res://Assets/Tilesets/tilemap_packed.png" id="1_5uba6"]
+[ext_resource type="Script" path="res://Scripts/door.gd" id="1_h5kof"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bx0r4"]
+atlas = ExtResource("1_5uba6")
+region = Rect2(144, 16, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kabce"]
+size = Vector2(12, 12)
+
+[node name="Door" type="Area2D"]
+texture_filter = 1
+scale = Vector2(5, 5)
+script = ExtResource("1_h5kof")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_bx0r4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.8147e-07, -3.8147e-07)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_kabce")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
