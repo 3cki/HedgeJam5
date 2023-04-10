@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0ai72px1c5do"]
+
+[ext_resource type="Texture2D" uid="uid://dapunlkirf0a2" path="res://Assets/Tilesets/tiles_packed.png" id="1_5lbyr"]
+[ext_resource type="Script" path="res://Scripts/key.gd" id="1_87hfm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8wv1"]
+atlas = ExtResource("1_5lbyr")
+region = Rect2(126, 18, 18, 18)
+filter_clip = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vspu1"]
+size = Vector2(18, 18)
+
+[node name="Key" type="Area2D"]
+scale = Vector2(4, 4)
+script = ExtResource("1_87hfm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = SubResource("AtlasTexture_y8wv1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vspu1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
