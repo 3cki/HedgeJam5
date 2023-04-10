@@ -538,6 +538,7 @@ next_scene = ExtResource("2_1cpxt")
 
 [node name="Closed Door" parent="." instance=ExtResource("5_5dwf6")]
 position = Vector2(600, 120)
+next_scene = ExtResource("3_ce206")
 
 [node name="Player" parent="." instance=ExtResource("2_3dqlv")]
 position = Vector2(120, 210)
