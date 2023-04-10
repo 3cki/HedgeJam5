@@ -530,7 +530,7 @@ layer_0/tile_data = PackedInt32Array(262145, 0, 4, 262146, 65536, 4, 262147, 655
 position = Vector2(1000, 290)
 
 [node name="Torch" parent="." instance=ExtResource("3_ce206")]
-position = Vector2(440, 210)
+position = Vector2(440, 200)
 
 [node name="Door" parent="." instance=ExtResource("5_j2tab")]
 position = Vector2(1000, 120)
@@ -541,7 +541,7 @@ position = Vector2(600, 120)
 next_scene = ExtResource("3_ce206")
 
 [node name="Player" parent="." instance=ExtResource("2_3dqlv")]
-position = Vector2(120, 210)
+position = Vector2(120, 200)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0, 0, 0, 1)

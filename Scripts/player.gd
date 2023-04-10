@@ -22,7 +22,6 @@ func _ready():
 	position = position.snapped(Vector2.ONE * tile_size)
 	position += Vector2.ONE * tile_size/2
 	add_to_group("player", true)
-	add_to_group("player_with_key")
 	instantiate_lives()
 	last_position = position
 
@@ -128,6 +127,8 @@ func get_torch_direction():
 func _on_hitbox_area_entered(area):
 	if area.is_in_group("enemy"):
 		hit_by_enemy(area)
+	if area.is_in_group("closed_door"):
+		move_tween(last_position)
 
 func hit_by_enemy(enemy):
 	$CooldownTimer.stop()
@@ -143,8 +144,6 @@ func _on_cooldown_timer_timeout():
 func _on_hitbox_area_exited(area):
 	if area.is_in_group("enemy"):
 		$CooldownTimer.start()
-	if area.is_in_group("closed_door"):
-		move_tween(last_position)
 
 func game_over():
 	get_tree().reload_current_scene()
