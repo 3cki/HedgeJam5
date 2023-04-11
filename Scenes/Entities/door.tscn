@@ -20,7 +20,6 @@ texture = SubResource("AtlasTexture_bx0r4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-3.8147e-07, -3.8147e-07)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_kabce")
 
 [node name="Timer" type="Timer" parent="."]
