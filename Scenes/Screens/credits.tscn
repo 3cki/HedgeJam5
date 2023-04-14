@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://mmqjol8lcd0h"]
 
-[ext_resource type="Texture2D" uid="uid://c8g3sqbjjjyg6" path="res://Assets/Menu/credits_button.png" id="1_1bq40"]
 [ext_resource type="Script" path="res://Scripts/credits.gd" id="1_vvvag"]
 [ext_resource type="FontFile" uid="uid://d2321jqfubru3" path="res://Assets/Fonts/PixeloidMono-VGj6x.ttf" id="3_esk13"]
+[ext_resource type="FontFile" uid="uid://bdxpyj3e4a3ya" path="res://Assets/Fonts/PixeloidSansBold-GOjpP.ttf" id="3_nryk0"]
 
 [node name="Credits" type="CanvasLayer"]
 
@@ -17,19 +17,42 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vvvag")
 
-[node name="TextureRect" type="TextureRect" parent="Control"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = 97.0
+offset_top = 331.0
+offset_right = 1070.0
+offset_bottom = 509.0
+theme_override_fonts/normal_font = ExtResource("3_esk13")
+theme_override_font_sizes/normal_font_size = 26
+text = "All graphical game assets by kenney.nl (public domain)
+Title font generated using Adobe Firefly AI
+Font: Pixeloid by GGBotNet (public domain)
+Music: Tranquility by Onis (public domain)
+Sounds generated using sfxr.me"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Control"]
+layout_mode = 0
+offset_left = 234.0
+offset_top = 211.0
+offset_right = 981.0
+offset_bottom = 275.0
+theme_override_fonts/normal_font = ExtResource("3_esk13")
+theme_override_font_sizes/normal_font_size = 42
+text = "A GAME BY ECKI (@ECKI107)"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Control"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 341.0
-offset_top = 3.0
-offset_right = 2253.0
-offset_bottom = 374.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(0.154508, 0.154508)
-texture = ExtResource("1_1bq40")
+anchors_preset = -1
+anchor_right = 1160.0
+anchor_bottom = 75.556
+offset_left = 312.0
+offset_top = 39.0
+offset_right = -128.0
+offset_bottom = -481.003
+theme_override_fonts/normal_font = ExtResource("3_nryk0")
+theme_override_font_sizes/normal_font_size = 104
+text = "CREDITS"
 
 [node name="Button" type="Button" parent="Control"]
 layout_mode = 1
