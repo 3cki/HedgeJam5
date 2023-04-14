@@ -1,16 +1,12 @@
-[gd_scene load_steps=28 format=3 uid="uid://bf42dca0q613w"]
+[gd_scene load_steps=24 format=3 uid="uid://dvnckv5up6t72"]
 
-[ext_resource type="Texture2D" uid="uid://2b274mu8t8nv" path="res://Assets/Tilesets/tilemap_packed.png" id="1_5tiqb"]
-[ext_resource type="PackedScene" uid="uid://cte17l6267ni6" path="res://Scenes/Entities/trap.tscn" id="2_1cpxt"]
-[ext_resource type="PackedScene" uid="uid://bi6lls0j7q5yi" path="res://Scenes/Entities/player.tscn" id="2_3dqlv"]
-[ext_resource type="PackedScene" uid="uid://dgmhtwak34tsn" path="res://Scenes/Entities/torch.tscn" id="3_ce206"]
-[ext_resource type="PackedScene" uid="uid://djw8shvp7sbx5" path="res://Scenes/Entities/closed_door.tscn" id="5_5dwf6"]
-[ext_resource type="PackedScene" uid="uid://bj7mjan6l3wca" path="res://Scenes/Levels/test_2.tscn" id="5_f1yhe"]
-[ext_resource type="PackedScene" uid="uid://e5cq3i80moa3" path="res://Scenes/Entities/door.tscn" id="5_j2tab"]
-[ext_resource type="PackedScene" uid="uid://citgt6p1f4olc" path="res://Scenes/Entities/hud.tscn" id="5_qrojd"]
-[ext_resource type="PackedScene" uid="uid://dfrsetjilifm6" path="res://Scenes/Entities/ghost.tscn" id="9_alwtn"]
-[ext_resource type="PackedScene" uid="uid://bxxahr3q6pdqv" path="res://Scenes/Entities/light_trigger.tscn" id="10_66ma3"]
-[ext_resource type="PackedScene" uid="uid://b854765bf1iho" path="res://Scenes/Entities/player_gate.tscn" id="11_60vif"]
+[ext_resource type="Texture2D" uid="uid://2b274mu8t8nv" path="res://Assets/Tilesets/tilemap_packed.png" id="1_e3qfm"]
+[ext_resource type="PackedScene" uid="uid://dgmhtwak34tsn" path="res://Scenes/Entities/torch.tscn" id="3_33381"]
+[ext_resource type="PackedScene" uid="uid://bg6gkbkht8ujn" path="res://Scenes/Levels/level_03.tscn" id="5_ahyls"]
+[ext_resource type="PackedScene" uid="uid://djw8shvp7sbx5" path="res://Scenes/Entities/closed_door.tscn" id="5_flfw8"]
+[ext_resource type="PackedScene" uid="uid://bi6lls0j7q5yi" path="res://Scenes/Entities/player.tscn" id="6_2lbse"]
+[ext_resource type="PackedScene" uid="uid://citgt6p1f4olc" path="res://Scenes/Entities/hud.tscn" id="7_xv20f"]
+[ext_resource type="PackedScene" uid="uid://b0ai72px1c5do" path="res://Scenes/Entities/key.tscn" id="8_jjd3b"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_cywkb"]
 polygon = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
@@ -55,7 +51,7 @@ polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5mt3l"]
-texture = ExtResource("1_5tiqb")
+texture = ExtResource("1_e3qfm")
 0:0/0 = 0
 0:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_cywkb")
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -521,41 +517,29 @@ occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_5mt3l")
 
-[node name="Test" type="Node2D"]
+[node name="Test2" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
 scale = Vector2(5, 5)
 tile_set = SubResource("TileSet_txosu")
 format = 2
-layer_0/tile_data = PackedInt32Array(262145, 0, 4, 262146, 65536, 4, 262147, 65536, 4, 327683, 0, 4, 327682, 0, 4, 393218, 65536, 4, 393217, 0, 4, 327681, 65536, 4, 262148, 0, 4, 327684, 0, 4, 327680, 65536, 1, 262144, 65536, 1, 196608, 65536, 1, 196609, 0, 4, 196610, 0, 4, 131074, 65536, 4, 131075, 65536, 4, 196612, 0, 4, 131073, 0, 4, 131072, 65536, 1, 65536, 65536, 1, 1, 131072, 0, 2, 131072, 0, 3, 131072, 0, 65539, 131072, 1, 65540, 131072, 1, 65541, 262144, 3, 65542, 131072, 1, 65544, 262144, 3, 65545, 262144, 3, 65546, 262144, 3, 65547, 131072, 1, 11, 131072, 0, 12, 131072, 0, 13, 131072, 0, 10, 131072, 0, 9, 131072, 0, 8, 131072, 0, 7, 131072, 0, 6, 131072, 0, 5, 131072, 0, 4, 131072, 0, 0, 65536, 0, 65537, 131072, 1, 65538, 262144, 3, 131077, 0, 4, 131078, 0, 4, 131079, 0, 4, 131080, 0, 4, 196615, 65536, 4, 196614, 65536, 4, 196613, 0, 4, 196611, 0, 4, 131076, 65536, 4, 131081, 65536, 4, 131082, 65536, 4, 131084, 0, 4, 65549, 262144, 3, 131085, 65536, 4, 196621, 0, 4, 262157, 0, 4, 327693, 65536, 4, 393229, 65536, 4, 458765, 131072, 2, 458764, 131072, 2, 458763, 131072, 2, 458762, 131072, 2, 458761, 131072, 2, 458760, 131072, 2, 458759, 131072, 2, 458758, 131072, 2, 458757, 131072, 2, 458756, 131072, 2, 458755, 131072, 2, 458754, 131072, 2, 458753, 131072, 2, 458752, 65536, 2, 393216, 65536, 1, 393219, 65536, 4, 393220, 0, 4, 327685, 65536, 4, 327686, 0, 4, 262151, 0, 4, 262152, 65536, 4, 262153, 0, 4, 262154, 0, 4, 262155, 0, 4, 327691, 65536, 4, 327690, 65536, 4, 393225, 0, 4, 393224, 0, 4, 393223, 65536, 4, 393221, 65536, 4, 327687, 65536, 4, 327688, 65536, 4, 327689, 0, 4, 393222, 65536, 4, 393226, 65536, 4, 393227, 65536, 4, 393228, 0, 4, 327692, 65536, 4, 262156, 65536, 4, 196620, 0, 4, 196619, 65536, 4, 196618, 0, 4, 131083, 65536, 4, 196617, 0, 4, 196616, 65536, 4, 262150, 0, 4, 262149, 393216, 3, 14, 196608, 0, 65550, 196608, 1, 131086, 196608, 1, 196622, 196608, 1, 262158, 196608, 1, 327694, 196608, 1, 393230, 196608, 1, 458766, 196608, 2, 65543, 262144, 3)
+layer_0/tile_data = PackedInt32Array(262145, 0, 4, 262146, 65536, 4, 262147, 65536, 4, 327683, 0, 4, 327682, 0, 4, 393218, 65536, 4, 393217, 0, 4, 327681, 65536, 4, 262148, 0, 4, 327684, 0, 4, 327680, 65536, 1, 262144, 65536, 1, 196608, 65536, 1, 196609, 0, 4, 196610, 0, 4, 131074, 65536, 4, 131075, 65536, 4, 196612, 0, 4, 131073, 0, 4, 131072, 65536, 1, 65536, 65536, 1, 1, 131072, 0, 2, 131072, 0, 3, 131072, 0, 65539, 131072, 1, 65540, 131072, 1, 65541, 262144, 3, 65542, 131072, 1, 65544, 262144, 3, 65545, 262144, 3, 65546, 262144, 3, 65547, 131072, 1, 11, 131072, 0, 12, 131072, 0, 13, 131072, 0, 10, 131072, 0, 9, 131072, 0, 8, 131072, 0, 7, 131072, 0, 6, 131072, 0, 5, 131072, 0, 4, 131072, 0, 0, 65536, 0, 65537, 131072, 1, 65538, 262144, 3, 131077, 0, 4, 131078, 0, 4, 131079, 0, 4, 131080, 0, 4, 196615, 65536, 4, 196614, 65536, 4, 196613, 0, 4, 196611, 0, 4, 131076, 65536, 4, 131081, 65536, 4, 131082, 65536, 4, 131084, 0, 4, 65549, 262144, 3, 131085, 65536, 4, 196621, 0, 4, 262157, 0, 4, 327693, 65536, 4, 393229, 65536, 4, 458765, 131072, 2, 458764, 131072, 2, 458763, 131072, 2, 458762, 131072, 2, 458761, 131072, 2, 458760, 131072, 2, 458759, 131072, 2, 458758, 131072, 2, 458757, 131072, 2, 458756, 131072, 2, 458755, 131072, 2, 458754, 131072, 2, 458753, 131072, 2, 458752, 65536, 2, 393216, 65536, 1, 393219, 65536, 4, 393220, 0, 4, 327685, 65536, 4, 327686, 0, 4, 262151, 0, 4, 262152, 65536, 4, 262153, 0, 4, 262154, 0, 4, 262155, 0, 4, 327691, 65536, 4, 327690, 65536, 4, 393225, 0, 4, 393224, 0, 4, 393223, 65536, 4, 393221, 65536, 4, 327687, 65536, 4, 327688, 65536, 4, 327689, 0, 4, 393222, 65536, 4, 393226, 65536, 4, 393227, 65536, 4, 393228, 0, 4, 327692, 65536, 4, 262156, 65536, 4, 196620, 0, 4, 196619, 65536, 4, 196618, 0, 4, 131083, 65536, 4, 196617, 0, 4, 196616, 65536, 4, 262150, 0, 4, 262149, 393216, 3, 14, 196608, 0, 65550, 196608, 1, 131086, 196608, 1, 196622, 196608, 1, 262158, 196608, 1, 327694, 196608, 1, 393230, 196608, 1, 458766, 196608, 2, 65548, 262144, 3)
 
-[node name="Trap" parent="." instance=ExtResource("2_1cpxt")]
-position = Vector2(1000, 290)
+[node name="Torch" parent="." instance=ExtResource("3_33381")]
+position = Vector2(440, 280)
 
-[node name="Torch" parent="." instance=ExtResource("3_ce206")]
-position = Vector2(440, 440)
+[node name="Closed Door" parent="." instance=ExtResource("5_flfw8")]
+position = Vector2(600, 120)
+next_scene = ExtResource("5_ahyls")
 
-[node name="Door" parent="." instance=ExtResource("5_j2tab")]
-position = Vector2(1000, 120)
-next_scene = ExtResource("5_f1yhe")
+[node name="Key" parent="." instance=ExtResource("8_jjd3b")]
+position = Vector2(1000, 440)
 
-[node name="Closed Door" parent="." instance=ExtResource("5_5dwf6")]
-position = Vector2(680, 120)
-
-[node name="Player" parent="." instance=ExtResource("2_3dqlv")]
+[node name="Player" parent="." instance=ExtResource("6_2lbse")]
 position = Vector2(120, 200)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0, 0, 0, 1)
 
-[node name="HUD" parent="." instance=ExtResource("5_qrojd")]
-
-[node name="Ghost" parent="." instance=ExtResource("9_alwtn")]
-position = Vector2(600, 280)
-
-[node name="Light Trigger" parent="." instance=ExtResource("10_66ma3")]
-position = Vector2(920, 440)
-
-[node name="Player Gate" parent="." instance=ExtResource("11_60vif")]
-position = Vector2(360, 280)
+[node name="HUD" parent="." instance=ExtResource("7_xv20f")]
