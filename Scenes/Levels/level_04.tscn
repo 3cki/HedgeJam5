@@ -519,7 +519,7 @@ occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_5mt3l")
 
-[node name="Test3" type="Node2D"]
+[node name="Test4" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
@@ -652,7 +652,6 @@ position = Vector2(720, 320)
 
 [node name="Key" parent="." instance=ExtResource("8_e54cl")]
 position = Vector2(760, 520)
-scale = Vector2(4, 4)
 
 [node name="Ghost" parent="." instance=ExtResource("7_biejg")]
 position = Vector2(120, 520)

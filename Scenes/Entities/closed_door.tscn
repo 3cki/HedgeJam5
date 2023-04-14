@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://djw8shvp7sbx5"]
+[gd_scene load_steps=6 format=3 uid="uid://djw8shvp7sbx5"]
 
 [ext_resource type="Script" path="res://Scripts/closed_door.gd" id="1_qcsye"]
 [ext_resource type="Texture2D" uid="uid://2b274mu8t8nv" path="res://Assets/Tilesets/tilemap_packed.png" id="1_rso3e"]
+[ext_resource type="AudioStream" uid="uid://beqs18rehyghs" path="res://Assets/Sounds/doorOpen_1.ogg" id="3_b6y2j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tdywt"]
 atlas = ExtResource("1_rso3e")
@@ -20,5 +21,8 @@ texture = SubResource("AtlasTexture_tdywt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_gpman")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_b6y2j")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
