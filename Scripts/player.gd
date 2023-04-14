@@ -86,6 +86,7 @@ func check_torch_contact():
 
 func pick_up_torch():
 	if can_pick_up_torch || picked_up_torch:
+		$TorchAudioStreamPlayer2D.play()
 		picked_up_torch = !picked_up_torch
 		torch.get_node("CollisionShape2D").disabled = picked_up_torch
 		get_torch_direction()
