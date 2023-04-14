@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 @export var lives = 3
 @export var tile_size = 16
-@export var speed = 3
 @onready var life = preload("res://Scenes/Entities/life.tscn") 
 @onready var ray = $RayCast2D
 var ray_size = 1
@@ -16,6 +15,7 @@ var torch_direction = Vector2.ZERO
 var torch_offset = Vector2.ZERO
 var life_group
 var last_position = Vector2.ZERO
+var can_move = true
 
 func _ready():
 	tile_size = tile_size * 5
@@ -33,7 +33,7 @@ func instantiate_lives():
 		new_life.position = Vector2(48 + i * 84, 48)
 
 func _unhandled_input(event):
-	if tween && tween.is_running():
+	if tween && tween.is_running() || !can_move:
 		return
 	for dir in inputs.keys():
 		if event.is_action_pressed(dir):
@@ -147,4 +147,9 @@ func _on_hitbox_area_exited(area):
 		$CooldownTimer.start()
 
 func game_over():
+	can_move = false
+	$HitAudioStreamPlayer2D.play()
+	$GameOverTimer.start()
+
+func _on_game_over_timer_timeout():
 	get_tree().reload_current_scene()
