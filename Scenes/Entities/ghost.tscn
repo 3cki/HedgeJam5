@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfrsetjilifm6"]
+
+[ext_resource type="Texture2D" uid="uid://2b274mu8t8nv" path="res://Assets/Tilesets/tilemap_packed.png" id="1_5kqa4"]
+[ext_resource type="Script" path="res://Scripts/ghost.gd" id="1_d72et"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1uf8"]
+atlas = ExtResource("1_5kqa4")
+region = Rect2(16, 160, 16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k2o3w"]
+size = Vector2(12, 12)
+
+[node name="Ghost" type="Area2D"]
+texture_filter = 1
+scale = Vector2(5, 5)
+script = ExtResource("1_d72et")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_t1uf8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_k2o3w")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(2.08165e-12, 20)
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
