@@ -20,10 +20,13 @@ func move(delta):
 		$Timer.start()
 		dir = -dir
 		update_ray()
+		update_sprite_rotation()
 
 func update_ray():
 	ray.target_position = dir * (tile_size / 5)
 
-
 func _on_timer_timeout():
 	can_check_collision = true
+
+func update_sprite_rotation():
+	$Sprite2D.flip_h = dir.x < 0
