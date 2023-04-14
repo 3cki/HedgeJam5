@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bf42dca0q613w"]
+[gd_scene load_steps=28 format=3 uid="uid://bf42dca0q613w"]
 
 [ext_resource type="Texture2D" uid="uid://2b274mu8t8nv" path="res://Assets/Tilesets/tilemap_packed.png" id="1_5tiqb"]
 [ext_resource type="PackedScene" uid="uid://cte17l6267ni6" path="res://Scenes/Entities/trap.tscn" id="2_1cpxt"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://citgt6p1f4olc" path="res://Scenes/Entities/hud.tscn" id="5_qrojd"]
 [ext_resource type="PackedScene" uid="uid://dfrsetjilifm6" path="res://Scenes/Entities/ghost.tscn" id="9_alwtn"]
 [ext_resource type="PackedScene" uid="uid://bxxahr3q6pdqv" path="res://Scenes/Entities/light_trigger.tscn" id="10_66ma3"]
+[ext_resource type="PackedScene" uid="uid://b854765bf1iho" path="res://Scenes/Entities/player_gate.tscn" id="11_60vif"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_cywkb"]
 polygon = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
@@ -555,3 +556,6 @@ position = Vector2(600, 280)
 
 [node name="Light Trigger" parent="." instance=ExtResource("10_66ma3")]
 position = Vector2(920, 440)
+
+[node name="Player Gate" parent="." instance=ExtResource("11_60vif")]
+position = Vector2(360, 280)
