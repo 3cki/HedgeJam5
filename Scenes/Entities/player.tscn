@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bi6lls0j7q5yi"]
+[gd_scene load_steps=7 format=3 uid="uid://ciqull7qw7sab"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_6iyn6"]
 [ext_resource type="Texture2D" uid="uid://2b274mu8t8nv" path="res://Assets/Tilesets/tilemap_packed.png" id="1_nooih"]
-[ext_resource type="AudioStream" uid="uid://bvo2qwgtcknmq" path="res://Assets/Sounds/random.wav" id="3_eyhvc"]
+[ext_resource type="AudioStream" uid="uid://bvo2qwgtcknmq" path="res://Assets/Sounds/step.wav" id="3_fwib1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mhxsi"]
 atlas = ExtResource("1_nooih")
@@ -55,7 +55,7 @@ drag_right_margin = 0.1
 drag_bottom_margin = 0.1
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_eyhvc")
+stream = ExtResource("3_fwib1")
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
 [connection signal="area_exited" from="Hitbox" to="." method="_on_hitbox_area_exited"]

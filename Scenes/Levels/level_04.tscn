@@ -2,12 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://2b274mu8t8nv" path="res://Assets/Tilesets/tilemap_packed.png" id="1_m3syj"]
 [ext_resource type="PackedScene" uid="uid://dgmhtwak34tsn" path="res://Scenes/Entities/torch.tscn" id="2_id6ca"]
-[ext_resource type="PackedScene" uid="uid://bi6lls0j7q5yi" path="res://Scenes/Entities/player.tscn" id="3_co2a3"]
+[ext_resource type="PackedScene" uid="uid://ciqull7qw7sab" path="res://Scenes/Entities/player.tscn" id="3_co2a3"]
 [ext_resource type="PackedScene" uid="uid://citgt6p1f4olc" path="res://Scenes/Entities/hud.tscn" id="4_0t0xb"]
 [ext_resource type="PackedScene" uid="uid://cte17l6267ni6" path="res://Scenes/Entities/trap.tscn" id="5_rx4ia"]
 [ext_resource type="PackedScene" uid="uid://dfrsetjilifm6" path="res://Scenes/Entities/ghost.tscn" id="7_biejg"]
 [ext_resource type="PackedScene" uid="uid://djw8shvp7sbx5" path="res://Scenes/Entities/closed_door.tscn" id="8_b6wst"]
-[ext_resource type="PackedScene" uid="uid://b0ai72px1c5do" path="res://Scenes/Entities/key.tscn" id="8_e54cl"]
+[ext_resource type="PackedScene" uid="uid://obqkglvecpfr" path="res://Scenes/Entities/key.tscn" id="8_e54cl"]
 [ext_resource type="PackedScene" uid="uid://cfybuembe1ryr" path="res://Scenes/Levels/level_05.tscn" id="9_0ksdp"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_cywkb"]

@@ -18,4 +18,4 @@ func _on_body_entered(body):
 
 
 func _on_audio_stream_player_2d_finished():
-	queue_free()
+	call_deferred("queue_free")
