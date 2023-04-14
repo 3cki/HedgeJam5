@@ -46,6 +46,10 @@ func move(dir):
 	update_ray(dir)
 	rotate_sprite(dir)
 	if !ray.is_colliding() || ray.get_collider().is_in_group("player_gate") && !picked_up_torch:
+		if !picked_up_torch:
+			$AudioStreamPlayer2D.play()
+		else:
+			$AudioStreamPlayer2D2.play()
 		last_position = position
 		var new_player_position = position + inputs[dir] * tile_size
 		move_tween(new_player_position)
