@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="HedgeJam"
-run/main_scene="res://Scenes/Levels/test.tscn"
+run/main_scene="res://Scenes/Levels/level_01.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
 
 [input]

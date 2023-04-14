@@ -1,9 +1,9 @@
-[gd_scene load_steps=25 format=3 uid="uid://bj7mjan6l3wca"]
+[gd_scene load_steps=25 format=3 uid="uid://dvnckv5up6t72"]
 
 [ext_resource type="Texture2D" uid="uid://2b274mu8t8nv" path="res://Assets/Tilesets/tilemap_packed.png" id="1_e3qfm"]
 [ext_resource type="PackedScene" uid="uid://cte17l6267ni6" path="res://Scenes/Entities/trap.tscn" id="2_s47p8"]
 [ext_resource type="PackedScene" uid="uid://dgmhtwak34tsn" path="res://Scenes/Entities/torch.tscn" id="3_33381"]
-[ext_resource type="PackedScene" uid="uid://bg6gkbkht8ujn" path="res://Scenes/Levels/test_3.tscn" id="5_5b0lq"]
+[ext_resource type="PackedScene" uid="uid://bg6gkbkht8ujn" path="res://Scenes/Levels/level_03.tscn" id="5_ahyls"]
 [ext_resource type="PackedScene" uid="uid://djw8shvp7sbx5" path="res://Scenes/Entities/closed_door.tscn" id="5_flfw8"]
 [ext_resource type="PackedScene" uid="uid://bi6lls0j7q5yi" path="res://Scenes/Entities/player.tscn" id="6_2lbse"]
 [ext_resource type="PackedScene" uid="uid://citgt6p1f4olc" path="res://Scenes/Entities/hud.tscn" id="7_xv20f"]
@@ -535,7 +535,7 @@ position = Vector2(440, 200)
 
 [node name="Closed Door" parent="." instance=ExtResource("5_flfw8")]
 position = Vector2(600, 120)
-next_scene = ExtResource("5_5b0lq")
+next_scene = ExtResource("5_ahyls")
 
 [node name="Player" parent="." instance=ExtResource("6_2lbse")]
 position = Vector2(120, 200)
