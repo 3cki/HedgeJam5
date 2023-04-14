@@ -15,3 +15,7 @@ func _on_body_entered(body):
 		get_parent().add_child(new_door)
 		self.visible = false
 		$CollisionShape2D.disabled = true
+
+
+func _on_audio_stream_player_2d_finished():
+	queue_free()

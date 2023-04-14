@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0ai72px1c5do"]
+[gd_scene load_steps=6 format=3 uid="uid://b0ai72px1c5do"]
 
 [ext_resource type="Texture2D" uid="uid://dapunlkirf0a2" path="res://Assets/Tilesets/tiles_packed.png" id="1_5lbyr"]
 [ext_resource type="Script" path="res://Scripts/key.gd" id="1_87hfm"]
+[ext_resource type="AudioStream" uid="uid://b3bn5q43dxosl" path="res://Assets/Sounds/beltHandle1.ogg" id="3_xuqkc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y8wv1"]
 atlas = ExtResource("1_5lbyr")
@@ -22,4 +23,8 @@ texture = SubResource("AtlasTexture_y8wv1")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_vspu1")
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_xuqkc")
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]
