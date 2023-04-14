@@ -27,6 +27,7 @@ func toggle_light():
 
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("torch"):
+		$AudioStreamPlayer2D.play()
 		toggle_light()
 
 func _on_area_2d_area_exited(area):
