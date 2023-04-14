@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bxxahr3q6pdqv"]
+[gd_scene load_steps=9 format=3 uid="uid://bxxahr3q6pdqv"]
 
 [ext_resource type="Script" path="res://Scripts/light_trigger.gd" id="1_4i4us"]
 [ext_resource type="Texture2D" uid="uid://bx6oebit1m7na" path="res://Assets/lightmask.png" id="2_wck3s"]
 [ext_resource type="Texture2D" uid="uid://2b274mu8t8nv" path="res://Assets/Tilesets/tilemap_packed.png" id="2_wkmov"]
+[ext_resource type="AudioStream" uid="uid://h6tn72fdpcxp" path="res://Assets/Sounds/light_trigger.wav" id="4_4px43"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6mi6p"]
 atlas = ExtResource("2_wkmov")
@@ -41,6 +42,9 @@ occluder = SubResource("OccluderPolygon2D_w0287")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_sxifn")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_4px43")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

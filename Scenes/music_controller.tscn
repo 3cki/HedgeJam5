@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://0i4623totnyk"]
+
+[ext_resource type="AudioStream" uid="uid://dhxpte4miqm6k" path="res://Assets/Sounds/Onys - Tranquility.mp3" id="1_jmpb1"]
+
+[node name="Music Controller" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_jmpb1")
+volume_db = 10.0
+autoplay = true

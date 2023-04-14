@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://2b274mu8t8nv" path="res://Assets/Tilesets/tilemap_packed.png" id="1_s7evc"]
 [ext_resource type="PackedScene" uid="uid://cte17l6267ni6" path="res://Scenes/Entities/trap.tscn" id="2_ppulm"]
 [ext_resource type="PackedScene" uid="uid://dgmhtwak34tsn" path="res://Scenes/Entities/torch.tscn" id="3_ou17m"]
-[ext_resource type="PackedScene" uid="uid://bi6lls0j7q5yi" path="res://Scenes/Entities/player.tscn" id="4_f2aoj"]
+[ext_resource type="PackedScene" uid="uid://ciqull7qw7sab" path="res://Scenes/Entities/player.tscn" id="4_f2aoj"]
 [ext_resource type="PackedScene" uid="uid://citgt6p1f4olc" path="res://Scenes/Entities/hud.tscn" id="5_0nl2v"]
 [ext_resource type="PackedScene" uid="uid://e5cq3i80moa3" path="res://Scenes/Entities/door.tscn" id="6_5vtgq"]
 [ext_resource type="PackedScene" uid="uid://l10j4sgkk5t6" path="res://Scenes/Levels/level_04.tscn" id="7_hob2i"]
@@ -517,7 +517,7 @@ occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_5mt3l")
 
-[node name="Test3" type="Node2D"]
+[node name="Test4" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1

@@ -2,7 +2,6 @@ extends CharacterBody2D
 
 @export var lives = 3
 @export var tile_size = 16
-@export var speed = 3
 @onready var life = preload("res://Scenes/Entities/life.tscn") 
 @onready var ray = $RayCast2D
 var ray_size = 1
@@ -16,6 +15,7 @@ var torch_direction = Vector2.ZERO
 var torch_offset = Vector2.ZERO
 var life_group
 var last_position = Vector2.ZERO
+var can_move = true
 
 func _ready():
 	tile_size = tile_size * 5
@@ -33,7 +33,7 @@ func instantiate_lives():
 		new_life.position = Vector2(48 + i * 84, 48)
 
 func _unhandled_input(event):
-	if tween && tween.is_running():
+	if tween && tween.is_running() || !can_move:
 		return
 	for dir in inputs.keys():
 		if event.is_action_pressed(dir):
@@ -46,6 +46,7 @@ func move(dir):
 	update_ray(dir)
 	rotate_sprite(dir)
 	if !ray.is_colliding() || ray.get_collider().is_in_group("player_gate") && !picked_up_torch:
+		$AudioStreamPlayer2D.play()
 		last_position = position
 		var new_player_position = position + inputs[dir] * tile_size
 		move_tween(new_player_position)
@@ -85,6 +86,7 @@ func check_torch_contact():
 
 func pick_up_torch():
 	if can_pick_up_torch || picked_up_torch:
+		$TorchAudioStreamPlayer2D.play()
 		picked_up_torch = !picked_up_torch
 		torch.get_node("CollisionShape2D").disabled = picked_up_torch
 		get_torch_direction()
@@ -146,4 +148,9 @@ func _on_hitbox_area_exited(area):
 		$CooldownTimer.start()
 
 func game_over():
+	can_move = false
+	$HitAudioStreamPlayer2D.play()
+	$GameOverTimer.start()
+
+func _on_game_over_timer_timeout():
 	get_tree().reload_current_scene()

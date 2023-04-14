@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://2b274mu8t8nv" path="res://Assets/Tilesets/tilemap_packed.png" id="1_gab3x"]
 [ext_resource type="PackedScene" uid="uid://dgmhtwak34tsn" path="res://Scenes/Entities/torch.tscn" id="2_cfq10"]
-[ext_resource type="PackedScene" uid="uid://bi6lls0j7q5yi" path="res://Scenes/Entities/player.tscn" id="3_t67u6"]
+[ext_resource type="PackedScene" uid="uid://ciqull7qw7sab" path="res://Scenes/Entities/player.tscn" id="3_t67u6"]
 [ext_resource type="PackedScene" uid="uid://citgt6p1f4olc" path="res://Scenes/Entities/hud.tscn" id="4_sonas"]
 [ext_resource type="PackedScene" uid="uid://cte17l6267ni6" path="res://Scenes/Entities/trap.tscn" id="5_xur6l"]
-[ext_resource type="PackedScene" uid="uid://b0ai72px1c5do" path="res://Scenes/Entities/key.tscn" id="6_6ps7i"]
+[ext_resource type="PackedScene" uid="uid://obqkglvecpfr" path="res://Scenes/Entities/key.tscn" id="6_6ps7i"]
 [ext_resource type="PackedScene" uid="uid://b854765bf1iho" path="res://Scenes/Entities/player_gate.tscn" id="7_yly2d"]
 [ext_resource type="PackedScene" uid="uid://djw8shvp7sbx5" path="res://Scenes/Entities/closed_door.tscn" id="8_lmcnu"]
 [ext_resource type="PackedScene" uid="uid://cmynpyb7mk5f3" path="res://Scenes/Levels/level_07.tscn" id="8_whvby"]
@@ -519,7 +519,7 @@ occlusion_layer_0/light_mask = 1
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_5mt3l")
 
-[node name="Test3" type="Node2D"]
+[node name="Test4" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1
