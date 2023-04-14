@@ -45,7 +45,7 @@ func move(dir):
 	if torch_movement_restrictions(dir): return
 	update_ray(dir)
 	rotate_sprite(dir)
-	if !ray.is_colliding():
+	if !ray.is_colliding() || ray.get_collider().is_in_group("player_gate") && !picked_up_torch:
 		last_position = position
 		var new_player_position = position + inputs[dir] * tile_size
 		move_tween(new_player_position)
