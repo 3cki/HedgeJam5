@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://cscdluqhbqst4"]
+
+[ext_resource type="Texture2D" uid="uid://3vpgeo5f2qls" path="res://Assets/Menu/title.png" id="1_fqwac"]
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_mlo8o"]
+
+[node name="Main Menu" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1167.0
+offset_bottom = 652.0
+script = ExtResource("1_mlo8o")
+
+[node name="StartButton" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 447.0
+offset_top = 325.0
+offset_right = -451.0
+offset_bottom = -252.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start Game"
+
+[node name="CreditsButton" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 447.0
+offset_top = 426.0
+offset_right = -451.0
+offset_bottom = -151.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Credits"
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 180.0
+offset_right = 3800.0
+offset_bottom = 687.0
+scale = Vector2(0.166532, 0.166532)
+texture = ExtResource("1_fqwac")
+
+[connection signal="pressed" from="Control/StartButton" to="Control" method="_on_start_button_pressed"]
+[connection signal="pressed" from="Control/CreditsButton" to="Control" method="_on_credits_button_pressed"]
