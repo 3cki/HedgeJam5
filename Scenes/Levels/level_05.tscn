@@ -1,12 +1,13 @@
-[gd_scene load_steps=24 format=3 uid="uid://bg6gkbkht8ujn"]
+[gd_scene load_steps=25 format=3 uid="uid://cfybuembe1ryr"]
 
-[ext_resource type="Texture2D" uid="uid://2b274mu8t8nv" path="res://Assets/Tilesets/tilemap_packed.png" id="1_s7evc"]
-[ext_resource type="PackedScene" uid="uid://cte17l6267ni6" path="res://Scenes/Entities/trap.tscn" id="2_ppulm"]
-[ext_resource type="PackedScene" uid="uid://dgmhtwak34tsn" path="res://Scenes/Entities/torch.tscn" id="3_ou17m"]
-[ext_resource type="PackedScene" uid="uid://bi6lls0j7q5yi" path="res://Scenes/Entities/player.tscn" id="4_f2aoj"]
-[ext_resource type="PackedScene" uid="uid://citgt6p1f4olc" path="res://Scenes/Entities/hud.tscn" id="5_0nl2v"]
-[ext_resource type="PackedScene" uid="uid://e5cq3i80moa3" path="res://Scenes/Entities/door.tscn" id="6_5vtgq"]
-[ext_resource type="PackedScene" uid="uid://l10j4sgkk5t6" path="res://Scenes/Levels/level_04.tscn" id="7_hob2i"]
+[ext_resource type="Texture2D" uid="uid://2b274mu8t8nv" path="res://Assets/Tilesets/tilemap_packed.png" id="1_i7ti3"]
+[ext_resource type="PackedScene" uid="uid://dgmhtwak34tsn" path="res://Scenes/Entities/torch.tscn" id="2_nsq5h"]
+[ext_resource type="PackedScene" uid="uid://bi6lls0j7q5yi" path="res://Scenes/Entities/player.tscn" id="3_1bss1"]
+[ext_resource type="PackedScene" uid="uid://citgt6p1f4olc" path="res://Scenes/Entities/hud.tscn" id="4_pu83s"]
+[ext_resource type="PackedScene" uid="uid://cte17l6267ni6" path="res://Scenes/Entities/trap.tscn" id="5_jlttq"]
+[ext_resource type="PackedScene" uid="uid://b0ai72px1c5do" path="res://Scenes/Entities/key.tscn" id="6_gxg11"]
+[ext_resource type="PackedScene" uid="uid://dfrsetjilifm6" path="res://Scenes/Entities/ghost.tscn" id="7_dsumx"]
+[ext_resource type="PackedScene" uid="uid://djw8shvp7sbx5" path="res://Scenes/Entities/closed_door.tscn" id="8_d3tic"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_cywkb"]
 polygon = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
@@ -51,7 +52,7 @@ polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5mt3l"]
-texture = ExtResource("1_s7evc")
+texture = ExtResource("1_i7ti3")
 0:0/0 = 0
 0:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_cywkb")
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -526,152 +527,134 @@ tile_set = SubResource("TileSet_txosu")
 format = 2
 layer_0/tile_data = PackedInt32Array(262145, 0, 4, 262146, 0, 4, 262147, 393216, 3, 327683, 0, 4, 327682, 0, 4, 393218, 393216, 3, 393217, 0, 4, 327681, 0, 4, 262148, 65536, 4, 327684, 0, 4, 327680, 65536, 1, 262144, 65536, 1, 196608, 65536, 1, 196609, 0, 4, 196610, 0, 4, 131074, 65536, 4, 131075, 65536, 4, 196612, 0, 4, 131073, 0, 4, 131072, 65536, 1, 65536, 65536, 1, 1, 131072, 0, 2, 131072, 0, 3, 131072, 0, 65539, 131072, 1, 65540, 131072, 1, 65542, 131072, 1, 65545, 262144, 3, 9, 131072, 0, 8, 131072, 0, 7, 131072, 0, 6, 131072, 0, 5, 131072, 0, 4, 131072, 0, 0, 65536, 0, 65537, 131072, 1, 65538, 262144, 3, 131077, 0, 4, 131078, 0, 4, 131079, 0, 4, 131080, 0, 4, 196615, 65536, 4, 196614, 65536, 4, 196613, 0, 4, 196611, 0, 4, 131076, 65536, 4, 131081, 65536, 4, 458752, 65536, 1, 393216, 65536, 1, 393219, 65536, 4, 393220, 0, 4, 327685, 0, 4, 327686, 0, 4, 262151, 0, 4, 262152, 65536, 4, 262153, 0, 4, 393225, 0, 4, 393224, 0, 4, 393223, 65536, 4, 393221, 65536, 4, 327687, 65536, 4, 327688, 65536, 4, 327689, 0, 4, 393222, 65536, 4, 196617, 0, 4, 196616, 65536, 4, 262150, 0, 4, 262149, 0, 4, 65543, 262144, 3, 65544, 262144, 3, 10, 196608, 0, 65546, 196608, 1, 131082, 196608, 1, 196618, 196608, 1, 262154, 196608, 1, 327690, 196608, 1, 393226, 196608, 1, 458762, 196608, 1, 458753, 65536, 4, 458754, 65536, 4, 458755, 65536, 4, 524291, 65536, 4, 524292, 0, 4, 524293, 0, 4, 524294, 0, 4, 458758, 65536, 4, 458757, 65536, 4, 458756, 393216, 3, 589830, 65536, 4, 589831, 0, 4, 524295, 393216, 3, 458760, 65536, 4, 458761, 0, 4, 524297, 393216, 3, 589833, 393216, 3, 589832, 393216, 3, 524296, 393216, 3, 458759, 0, 4, 589828, 393216, 3, 589827, 0, 4, 589826, 65536, 4, 524290, 393216, 3, 524289, 65536, 4, 589825, 65536, 4, 655361, 393216, 3, 655362, 393216, 3, 720898, 0, 4, 720899, 0, 4, 720900, 65536, 4, 720901, 393216, 3, 655365, 393216, 3, 589829, 0, 4, 655364, 393216, 3, 655363, 65536, 4, 720897, 65536, 4, 786433, 0, 4, 786434, 0, 4, 786435, 65536, 4, 786436, 393216, 3, 786437, 65536, 4, 851973, 393216, 3, 851974, 65536, 4, 786438, 0, 4, 786439, 65536, 4, 720903, 393216, 3, 720902, 65536, 4, 655366, 65536, 4, 655367, 65536, 4, 655368, 0, 4, 655369, 65536, 4, 720905, 0, 4, 786441, 65536, 4, 786440, 393216, 3, 851976, 65536, 4, 851975, 65536, 4, 851977, 65536, 4, 720904, 65536, 4, 851972, 393216, 3, 851971, 65536, 4, 851970, 0, 4, 851969, 65536, 4, 524288, 65536, 1, 589824, 65536, 1, 655360, 65536, 1, 720896, 65536, 1, 786432, 65536, 1, 851968, 65536, 1, 524298, 196608, 1, 589834, 196608, 1, 655370, 196608, 1, 720906, 196608, 1, 786442, 196608, 1, 851978, 196608, 1, 917505, 131072, 2, 917506, 131072, 2, 917507, 131072, 2, 917508, 131072, 2, 917509, 131072, 2, 917510, 131072, 2, 917511, 131072, 2, 917512, 131072, 2, 917513, 131072, 2, 917514, 196608, 2, 917504, 65536, 2)
 
-[node name="Torch" parent="." instance=ExtResource("3_ou17m")]
+[node name="Torch" parent="." instance=ExtResource("2_nsq5h")]
 position = Vector2(440, 1000)
 
-[node name="Player" parent="." instance=ExtResource("4_f2aoj")]
+[node name="Player" parent="." instance=ExtResource("3_1bss1")]
 position = Vector2(200, 1000)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0, 0, 0, 1)
 
-[node name="HUD" parent="." instance=ExtResource("5_0nl2v")]
+[node name="HUD" parent="." instance=ExtResource("4_pu83s")]
 
 [node name="Traps" type="Node2D" parent="."]
-position = Vector2(40, 120)
+position = Vector2(40, 40)
 
-[node name="Trap" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(320, 720)
 
-[node name="Trap2" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap2" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(240, 720)
 
-[node name="Trap3" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap3" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(160, 720)
 
-[node name="Trap4" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap4" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(80, 720)
 
-[node name="Trap5" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap5" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(480, 720)
 
-[node name="Trap6" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap6" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(560, 720)
 
-[node name="Trap7" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap7" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(640, 720)
 
-[node name="Trap8" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap8" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(720, 720)
 
-[node name="Trap9" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap9" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(320, 640)
 
-[node name="Trap10" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap10" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(240, 640)
 
-[node name="Trap11" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap11" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(160, 640)
 
-[node name="Trap12" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap12" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(80, 640)
 
-[node name="Trap13" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap13" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(480, 640)
 
-[node name="Trap14" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap14" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(560, 640)
 
-[node name="Trap15" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap15" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(640, 640)
 
-[node name="Trap16" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap16" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(720, 640)
 
-[node name="Trap19" parent="Traps" instance=ExtResource("2_ppulm")]
-position = Vector2(160, 560)
-
-[node name="Trap20" parent="Traps" instance=ExtResource("2_ppulm")]
-position = Vector2(80, 560)
-
-[node name="Trap21" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap17" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(480, 560)
 
-[node name="Trap22" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap18" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(560, 560)
 
-[node name="Trap23" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap19" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(640, 560)
 
-[node name="Trap24" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap20" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(720, 560)
 
-[node name="Trap25" parent="Traps" instance=ExtResource("2_ppulm")]
-position = Vector2(160, 480)
-
-[node name="Trap26" parent="Traps" instance=ExtResource("2_ppulm")]
-position = Vector2(80, 480)
-
-[node name="Trap27" parent="Traps" instance=ExtResource("2_ppulm")]
-position = Vector2(480, 480)
-
-[node name="Trap28" parent="Traps" instance=ExtResource("2_ppulm")]
-position = Vector2(560, 480)
-
-[node name="Trap29" parent="Traps" instance=ExtResource("2_ppulm")]
-position = Vector2(640, 480)
-
-[node name="Trap30" parent="Traps" instance=ExtResource("2_ppulm")]
-position = Vector2(720, 480)
-
-[node name="Trap31" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap31" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(160, 400)
 
-[node name="Trap37" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap37" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(240, 400)
 
-[node name="Trap38" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap38" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(400, 400)
 
-[node name="Trap32" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap32" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(80, 400)
 
-[node name="Trap33" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap33" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(480, 400)
 
-[node name="Trap34" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap34" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(560, 400)
 
-[node name="Trap35" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap35" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(640, 400)
 
-[node name="Trap36" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap36" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(720, 400)
 
-[node name="Trap39" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap39" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(160, 320)
 
-[node name="Trap40" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap40" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(240, 320)
 
-[node name="Trap41" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap41" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(400, 320)
 
-[node name="Trap42" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap42" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(80, 320)
 
-[node name="Trap43" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap43" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(480, 320)
 
-[node name="Trap44" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap44" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(560, 320)
 
-[node name="Trap45" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap45" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(640, 320)
 
-[node name="Trap46" parent="Traps" instance=ExtResource("2_ppulm")]
+[node name="Trap46" parent="Traps" instance=ExtResource("5_jlttq")]
 position = Vector2(720, 320)
 
-[node name="Door" parent="." instance=ExtResource("6_5vtgq")]
+[node name="Key" parent="." instance=ExtResource("6_gxg11")]
+position = Vector2(760, 520)
+scale = Vector2(4, 4)
+
+[node name="Ghost" parent="." instance=ExtResource("7_dsumx")]
+position = Vector2(120, 520)
+
+[node name="Closed Door" parent="." instance=ExtResource("8_d3tic")]
 position = Vector2(440, 120)
-next_scene = ExtResource("7_hob2i")
