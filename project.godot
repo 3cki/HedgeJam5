@@ -14,6 +14,10 @@ config/name="HedgeJam"
 run/main_scene="res://Scenes/Levels/level_01.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
 
+[autoload]
+
+MusicController="*res://Scenes/music_controller.tscn"
+
 [input]
 
 "Walk Up"={

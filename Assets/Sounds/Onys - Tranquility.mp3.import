@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dhxpte4miqm6k"
+path="res://.godot/imported/Onys - Tranquility.mp3-0124e5eb843ff8fc8cb5bb93556228fe.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Onys - Tranquility.mp3"
+dest_files=["res://.godot/imported/Onys - Tranquility.mp3-0124e5eb843ff8fc8cb5bb93556228fe.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
