@@ -1,19 +1,19 @@
 [gd_scene load_steps=8 format=3 uid="uid://bxxahr3q6pdqv"]
 
 [ext_resource type="Script" path="res://Scripts/light_trigger.gd" id="1_4i4us"]
-[ext_resource type="Texture2D" uid="uid://dom4uao1bvdo3" path="res://Assets/Tilesets/roguelikeSheet_transparent.png" id="1_nw0bj"]
 [ext_resource type="Texture2D" uid="uid://bx6oebit1m7na" path="res://Assets/lightmask.png" id="2_wck3s"]
+[ext_resource type="Texture2D" uid="uid://2b274mu8t8nv" path="res://Assets/Tilesets/tilemap_packed.png" id="2_wkmov"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6mi6p"]
-atlas = ExtResource("1_nw0bj")
-region = Rect2(697, 408, 16, 16)
+atlas = ExtResource("2_wkmov")
+region = Rect2(64, 80, 16, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sr8f5"]
 size = Vector2(10, 14)
 
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_w52to"]
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_w0287"]
 cull_mode = 2
-polygon = PackedVector2Array(5, -5, 4, -1, 4, 0, 4, 3, 3, 4, 3, 5, 4, 7, 1, 6, -1, 6, -4, 7, -3, 5, -3, 4, -4, 3, -4, 0, -4, -3, -5, -7, -1, -6, 0, -4, 1, -4)
+polygon = PackedVector2Array(-4, 7, -4, 3, -6, 2, -6, -4, -4, -5, -3, -6, -3, -7, 3, -7, 3, -6, 4, -5, 6, -4, 6, 2, 4, 3, 4, 7)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sxifn"]
 radius = 21.6924
@@ -35,7 +35,7 @@ texture = ExtResource("2_wck3s")
 texture_scale = 0.05
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-occluder = SubResource("OccluderPolygon2D_w52to")
+occluder = SubResource("OccluderPolygon2D_w0287")
 
 [node name="Area2D" type="Area2D" parent="."]
 

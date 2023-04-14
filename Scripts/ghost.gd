@@ -8,6 +8,7 @@ var can_check_collision = true
 
 func _ready():
 	add_to_group("enemy")
+	add_to_group("light_trigger_group")
 	update_ray()
 		
 func _process(delta):
