@@ -89,6 +89,7 @@ stream = ExtResource("4_kqt7y")
 stream = ExtResource("5_mh6vs")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Control" type="Control" parent="CanvasLayer"]
 visible = false
