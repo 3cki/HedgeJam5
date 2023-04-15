@@ -24,6 +24,8 @@ func _ready():
 	add_to_group("player", true)
 	instantiate_lives()
 	last_position = position
+	get_node("CanvasLayer/Control").visible = true
+	get_node("CanvasLayer/Control/Space").visible = can_pick_up_torch
 
 func instantiate_lives():
 	for i in lives:
@@ -82,6 +84,7 @@ func check_torch_contact():
 			if hit_object.is_in_group("torch"):
 				can_pick_up_torch = true
 				torch = hit_object
+	get_node("CanvasLayer/Control/Space").visible = can_pick_up_torch || picked_up_torch
 	ray.rotation_degrees = og_rotation
 
 func pick_up_torch():
@@ -90,6 +93,21 @@ func pick_up_torch():
 		picked_up_torch = !picked_up_torch
 		torch.get_node("CollisionShape2D").disabled = picked_up_torch
 		get_torch_direction()
+		if torch_direction == Vector2.LEFT || torch_direction == Vector2.RIGHT:
+			get_node("CanvasLayer/Control/W").visible = false
+			get_node("CanvasLayer/Control/S").visible = false
+			get_node("CanvasLayer/Control/A").visible = true
+			get_node("CanvasLayer/Control/D").visible = true
+		else:
+			get_node("CanvasLayer/Control/W").visible = true
+			get_node("CanvasLayer/Control/S").visible = true
+			get_node("CanvasLayer/Control/A").visible = false
+			get_node("CanvasLayer/Control/D").visible = false
+		if !picked_up_torch:
+			get_node("CanvasLayer/Control/W").visible = true
+			get_node("CanvasLayer/Control/S").visible = true
+			get_node("CanvasLayer/Control/A").visible = true
+			get_node("CanvasLayer/Control/D").visible = true
 
 func move_tween(new_player_position):
 	if tween:
