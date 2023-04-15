@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cscdluqhbqst4"]
+[gd_scene load_steps=5 format=3 uid="uid://cscdluqhbqst4"]
 
 [ext_resource type="Texture2D" uid="uid://3vpgeo5f2qls" path="res://Assets/Menu/title.png" id="1_fqwac"]
 [ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_mlo8o"]
+[ext_resource type="Texture2D" uid="uid://tjeekuh7xr2h" path="res://Assets/Menu/Bildschirmfoto 2023-04-15 um 20.22.32.png" id="2_o82rk"]
 [ext_resource type="FontFile" uid="uid://d2321jqfubru3" path="res://Assets/Fonts/PixeloidMono-VGj6x.ttf" id="2_w5dqo"]
 
 [node name="Main Menu" type="Node2D"]
@@ -16,6 +17,14 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_mlo8o")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = -404.0
+offset_top = -175.0
+offset_right = 624.0
+offset_bottom = 469.0
+texture = ExtResource("2_o82rk")
 
 [node name="Title" type="TextureRect" parent="CanvasLayer/Control"]
 texture_filter = 1
