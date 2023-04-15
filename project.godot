@@ -10,13 +10,18 @@ config_version=5
 
 [application]
 
-config/name="HedgeJam"
+config/name="Lightbearer"
+config/description="As part of HedgeJam #5, you only have one torch in this game. You have to find a way out of the puzzle dungeons using the limited resource of light you have."
 run/main_scene="res://Scenes/Screens/main_menu.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
 
 [autoload]
 
 MusicController="*res://Scenes/music_controller.tscn"
+
+[display]
+
+window/size/resizable=false
 
 [input]
 
@@ -50,3 +55,4 @@ MusicController="*res://Scenes/music_controller.tscn"
 
 renderer/rendering_method="mobile"
 environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+textures/canvas_textures/default_texture_filter=0

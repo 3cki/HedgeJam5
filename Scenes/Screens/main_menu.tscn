@@ -6,14 +6,18 @@
 
 [node name="Main Menu" type="Node2D"]
 
-[node name="Control" type="Control" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 1167.0
-offset_bottom = 652.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_mlo8o")
 
-[node name="Title" type="TextureRect" parent="Control"]
+[node name="Title" type="TextureRect" parent="CanvasLayer/Control"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 5
@@ -28,7 +32,7 @@ texture = ExtResource("1_fqwac")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="StartButton" type="Button" parent="Control"]
+[node name="StartButton" type="Button" parent="CanvasLayer/Control"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -47,7 +51,7 @@ theme_override_fonts/font = ExtResource("2_w5dqo")
 theme_override_font_sizes/font_size = 36
 text = "START GAME"
 
-[node name="CreditsButton" type="Button" parent="Control"]
+[node name="CreditsButton" type="Button" parent="CanvasLayer/Control"]
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
@@ -66,5 +70,5 @@ theme_override_fonts/font = ExtResource("2_w5dqo")
 theme_override_font_sizes/font_size = 36
 text = "CREDITS"
 
-[connection signal="pressed" from="Control/StartButton" to="Control" method="_on_start_button_pressed"]
-[connection signal="pressed" from="Control/CreditsButton" to="Control" method="_on_credits_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/StartButton" to="CanvasLayer/Control" method="_on_start_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Control/CreditsButton" to="CanvasLayer/Control" method="_on_credits_button_pressed"]
