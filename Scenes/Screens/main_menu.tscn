@@ -1,0 +1,70 @@
+[gd_scene load_steps=4 format=3 uid="uid://cscdluqhbqst4"]
+
+[ext_resource type="Texture2D" uid="uid://3vpgeo5f2qls" path="res://Assets/Menu/title.png" id="1_fqwac"]
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_mlo8o"]
+[ext_resource type="FontFile" uid="uid://d2321jqfubru3" path="res://Assets/Fonts/PixeloidMono-VGj6x.ttf" id="2_w5dqo"]
+
+[node name="Main Menu" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1167.0
+offset_bottom = 652.0
+script = ExtResource("1_mlo8o")
+
+[node name="Title" type="TextureRect" parent="Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -400.0
+offset_top = 50.0
+offset_right = 400.0
+offset_bottom = 225.0
+grow_horizontal = 2
+texture = ExtResource("1_fqwac")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="StartButton" type="Button" parent="Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -37.5
+offset_right = 150.0
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(150, 37)
+theme_override_fonts/font = ExtResource("2_w5dqo")
+theme_override_font_sizes/font_size = 36
+text = "START GAME"
+
+[node name="CreditsButton" type="Button" parent="Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = 74.0
+offset_right = 150.0
+offset_bottom = 149.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(150, 36)
+theme_override_fonts/font = ExtResource("2_w5dqo")
+theme_override_font_sizes/font_size = 36
+text = "CREDITS"
+
+[connection signal="pressed" from="Control/StartButton" to="Control" method="_on_start_button_pressed"]
+[connection signal="pressed" from="Control/CreditsButton" to="Control" method="_on_credits_button_pressed"]
