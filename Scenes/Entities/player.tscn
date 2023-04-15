@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://ciqull7qw7sab"]
+[gd_scene load_steps=15 format=3 uid="uid://ciqull7qw7sab"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_6iyn6"]
 [ext_resource type="Texture2D" uid="uid://2b274mu8t8nv" path="res://Assets/Tilesets/tilemap_packed.png" id="1_nooih"]
 [ext_resource type="AudioStream" uid="uid://bvo2qwgtcknmq" path="res://Assets/Sounds/step.wav" id="3_fwib1"]
 [ext_resource type="AudioStream" uid="uid://104xtuhsnuk7" path="res://Assets/Sounds/hit.wav" id="4_kqt7y"]
 [ext_resource type="AudioStream" uid="uid://bh7lgow5q6lta" path="res://Assets/Sounds/torch.wav" id="5_mh6vs"]
+[ext_resource type="Texture2D" uid="uid://crucxu0a4t854" path="res://Assets/Tilesets/tilemap_white_packed.png" id="6_fw33u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mhxsi"]
 atlas = ExtResource("1_nooih")
@@ -16,6 +17,26 @@ size = Vector2(16, 15)
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_cma62"]
 cull_mode = 1
 polygon = PackedVector2Array(4, -7, -4, -7, -4, -6, -5, -4, -6, -4, -6, 3, -7, 7, -7, 8, 7, 8, 7, 7, 6, 3, 6, -4, 5, -4, 4, -6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k36g8"]
+atlas = ExtResource("6_fw33u")
+region = Rect2(496, 224, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cavpe"]
+atlas = ExtResource("6_fw33u")
+region = Rect2(288, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yri3h"]
+atlas = ExtResource("6_fw33u")
+region = Rect2(288, 176, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekt3p"]
+atlas = ExtResource("6_fw33u")
+region = Rect2(304, 176, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m2ao5"]
+atlas = ExtResource("6_fw33u")
+region = Rect2(320, 176, 16, 16)
 
 [node name="Player" type="CharacterBody2D"]
 z_index = 1
@@ -66,6 +87,95 @@ stream = ExtResource("4_kqt7y")
 
 [node name="TorchAudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_mh6vs")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Space" type="TextureRect" parent="CanvasLayer/Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -88.5
+offset_top = -77.0
+offset_right = 88.5
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = SubResource("AtlasTexture_k36g8")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="W" type="TextureRect" parent="CanvasLayer/Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 80.0
+offset_top = -135.0
+offset_right = 150.0
+offset_bottom = -70.0
+grow_vertical = 0
+texture = SubResource("AtlasTexture_cavpe")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="A" type="TextureRect" parent="CanvasLayer/Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = -78.0
+offset_right = 88.0
+offset_bottom = -13.0
+grow_vertical = 0
+texture = SubResource("AtlasTexture_yri3h")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="S" type="TextureRect" parent="CanvasLayer/Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 80.0
+offset_top = -78.0
+offset_right = 150.0
+offset_bottom = -13.0
+grow_vertical = 0
+texture = SubResource("AtlasTexture_ekt3p")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="D" type="TextureRect" parent="CanvasLayer/Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 140.0
+offset_top = -78.0
+offset_right = 210.0
+offset_bottom = -13.0
+grow_vertical = 0
+texture = SubResource("AtlasTexture_m2ao5")
+expand_mode = 1
+stretch_mode = 4
 
 [connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
 [connection signal="area_exited" from="Hitbox" to="." method="_on_hitbox_area_exited"]

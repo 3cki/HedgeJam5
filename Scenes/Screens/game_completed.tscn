@@ -519,7 +519,6 @@ sources/0 = SubResource("TileSetAtlasSource_5mt3l")
 [node name="Game Completed" type="Node2D"]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-scale = Vector2(1, 1)
 color = Color(0, 0, 0, 1)
 
 [node name="TileMap" type="TileMap" parent="."]
