@@ -17,12 +17,56 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_vvvag")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Control"]
-layout_mode = 0
-offset_left = 97.0
-offset_top = 331.0
-offset_right = 1070.0
-offset_bottom = 509.0
+[node name="Title" type="RichTextLabel" parent="Control"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -272.5
+offset_right = 272.5
+offset_bottom = 128.0
+grow_horizontal = 2
+pivot_offset = Vector2(272, 64)
+theme_override_fonts/normal_font = ExtResource("3_nryk0")
+theme_override_font_sizes/normal_font_size = 104
+text = "CREDITS"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="Subtitle" type="RichTextLabel" parent="Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -355.5
+offset_top = 150.0
+offset_right = 355.5
+offset_bottom = 203.0
+grow_horizontal = 2
+theme_override_fonts/normal_font = ExtResource("3_esk13")
+theme_override_font_sizes/normal_font_size = 42
+text = "A GAME BY ECKI (@ECKI107)"
+fit_content = true
+scroll_active = false
+shortcut_keys_enabled = false
+text_direction = 1
+
+[node name="Content" type="RichTextLabel" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -475.0
+offset_top = -26.5
+offset_right = 475.0
+offset_bottom = 143.5
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(475, 85)
 theme_override_fonts/normal_font = ExtResource("3_esk13")
 theme_override_font_sizes/normal_font_size = 26
 text = "All graphical game assets by kenney.nl (public domain)
@@ -30,41 +74,22 @@ Title font generated using Adobe Firefly AI
 Font: Pixeloid by GGBotNet (public domain)
 Music: Tranquility by Onis (public domain)
 Sounds generated using sfxr.me"
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Control"]
-layout_mode = 0
-offset_left = 234.0
-offset_top = 211.0
-offset_right = 981.0
-offset_bottom = 275.0
-theme_override_fonts/normal_font = ExtResource("3_esk13")
-theme_override_font_sizes/normal_font_size = 42
-text = "A GAME BY ECKI (@ECKI107)"
-
-[node name="RichTextLabel3" type="RichTextLabel" parent="Control"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1160.0
-anchor_bottom = 75.556
-offset_left = 312.0
-offset_top = 39.0
-offset_right = -128.0
-offset_bottom = -481.003
-theme_override_fonts/normal_font = ExtResource("3_nryk0")
-theme_override_font_sizes/normal_font_size = 104
-text = "CREDITS"
+scroll_active = false
+shortcut_keys_enabled = false
 
 [node name="Button" type="Button" parent="Control"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 479.0
-offset_top = 563.0
-offset_right = -481.0
-offset_bottom = -27.0
+offset_left = -100.0
+offset_top = -103.0
+offset_right = 100.0
+offset_bottom = -28.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 theme_override_fonts/font = ExtResource("3_esk13")
 theme_override_font_sizes/font_size = 36
 text = "BACK"
