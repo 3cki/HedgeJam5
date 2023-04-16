@@ -645,6 +645,12 @@ position = Vector2(320, -480)
 [node name="Trap37" parent="Traps" instance=ExtResource("4_n6ndl")]
 position = Vector2(240, -400)
 
+[node name="Trap38" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(320, -400)
+
+[node name="Trap39" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(160, -400)
+
 [node name="Torch" parent="." instance=ExtResource("5_t22fy")]
 position = Vector2(360, 920)
 

@@ -531,7 +531,6 @@ layer_0/tile_data = PackedInt32Array(0, 65536, 0, 1, 131072, 0, 2, 131072, 0, 3,
 position = Vector2(120, 200)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="HUD" parent="." instance=ExtResource("3_rfaky")]
