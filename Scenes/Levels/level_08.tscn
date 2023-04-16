@@ -1,13 +1,15 @@
-[gd_scene load_steps=25 format=3 uid="uid://cmynpyb7mk5f3"]
+[gd_scene load_steps=30 format=3 uid="uid://ci144ssdusvof"]
 
-[ext_resource type="Texture2D" uid="uid://2b274mu8t8nv" path="res://Assets/Tilesets/tilemap_packed.png" id="1_feu14"]
-[ext_resource type="PackedScene" uid="uid://ciqull7qw7sab" path="res://Scenes/Entities/player.tscn" id="2_4jwv1"]
-[ext_resource type="PackedScene" uid="uid://citgt6p1f4olc" path="res://Scenes/Entities/hud.tscn" id="3_rfaky"]
-[ext_resource type="PackedScene" uid="uid://cte17l6267ni6" path="res://Scenes/Entities/trap.tscn" id="4_4gh8w"]
-[ext_resource type="PackedScene" uid="uid://bxxahr3q6pdqv" path="res://Scenes/Entities/light_trigger.tscn" id="6_80vcr"]
-[ext_resource type="PackedScene" uid="uid://e5cq3i80moa3" path="res://Scenes/Entities/door.tscn" id="7_fmcl7"]
-[ext_resource type="PackedScene" uid="uid://ci144ssdusvof" path="res://Scenes/Levels/level_08.tscn" id="8_6x61o"]
-[ext_resource type="PackedScene" uid="uid://dgmhtwak34tsn" path="res://Scenes/Entities/torch.tscn" id="8_d6m71"]
+[ext_resource type="Texture2D" uid="uid://2b274mu8t8nv" path="res://Assets/Tilesets/tilemap_packed.png" id="1_cmfvg"]
+[ext_resource type="PackedScene" uid="uid://ciqull7qw7sab" path="res://Scenes/Entities/player.tscn" id="2_ye651"]
+[ext_resource type="PackedScene" uid="uid://citgt6p1f4olc" path="res://Scenes/Entities/hud.tscn" id="3_qdkxg"]
+[ext_resource type="PackedScene" uid="uid://cte17l6267ni6" path="res://Scenes/Entities/trap.tscn" id="4_n6ndl"]
+[ext_resource type="PackedScene" uid="uid://dgmhtwak34tsn" path="res://Scenes/Entities/torch.tscn" id="5_t22fy"]
+[ext_resource type="PackedScene" uid="uid://bxxahr3q6pdqv" path="res://Scenes/Entities/light_trigger.tscn" id="6_lkdup"]
+[ext_resource type="PackedScene" uid="uid://obqkglvecpfr" path="res://Scenes/Entities/key.tscn" id="6_u01ep"]
+[ext_resource type="PackedScene" uid="uid://bf4o50fdgvy05" path="res://Scenes/Screens/game_completed.tscn" id="8_5kr4b"]
+[ext_resource type="PackedScene" uid="uid://dfrsetjilifm6" path="res://Scenes/Entities/ghost.tscn" id="8_d4rsj"]
+[ext_resource type="PackedScene" uid="uid://djw8shvp7sbx5" path="res://Scenes/Entities/closed_door.tscn" id="9_daajg"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_c06ye"]
 polygon = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
@@ -42,17 +44,26 @@ polygon = PackedVector2Array(8, 8, -8, 8, -8, 0.9375, -5, 1, -5, 0, -3, 0, -3, -
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xbtbi"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ehdvk"]
+polygon = PackedVector2Array(8, 8, -2, 8, -2, 1, 8, 1)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_mfiw3"]
+polygon = PackedVector2Array(3, 0, -2, 0, -2, -8, 8, -8, 8, 1, 3, 1)
+
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ffc5b"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_u31ut"]
-polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_lpioj"]
+polygon = PackedVector2Array(-8, 1, 2, 1, 2, 8, -8, 8)
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_x51il"]
+polygon = PackedVector2Array(-8, -8, 2, -8, 2, 0, -6, 0, -6, 1, -8, 1)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_daf27"]
 polygon = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5mt3l"]
-texture = ExtResource("1_feu14")
+texture = ExtResource("1_cmfvg")
 0:0/0 = 0
 0:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_c06ye")
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -74,12 +85,12 @@ texture = ExtResource("1_feu14")
 3:0/0/physics_layer_0/angular_velocity = 0.0
 3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:0/0 = 0
-4:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_c06ye")
+4:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_ehdvk")
 4:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:0/0/physics_layer_0/angular_velocity = 0.0
 4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:0/0 = 0
-5:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_u31ut")
+5:0/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_lpioj")
 5:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:0/0/physics_layer_0/angular_velocity = 0.0
 5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -127,12 +138,12 @@ texture = ExtResource("1_feu14")
 3:1/0/physics_layer_0/angular_velocity = 0.0
 3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:1/0 = 0
-4:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_c06ye")
+4:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_mfiw3")
 4:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 4:1/0/physics_layer_0/angular_velocity = 0.0
 4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:1/0 = 0
-5:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_u31ut")
+5:1/0/occlusion_layer_0/polygon = SubResource("OccluderPolygon2D_x51il")
 5:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 5:1/0/physics_layer_0/angular_velocity = 0.0
 5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -525,83 +536,138 @@ texture_filter = 1
 scale = Vector2(5, 5)
 tile_set = SubResource("TileSet_txosu")
 format = 2
-layer_0/tile_data = PackedInt32Array(0, 65536, 0, 1, 131072, 0, 2, 131072, 0, 3, 131072, 0, 4, 131072, 0, 5, 131072, 0, 65536, 65536, 1, 131072, 65536, 1, 196608, 65536, 1, 262144, 65536, 1, 327680, 65536, 1, 393216, 65536, 1, 458752, 65536, 1, 524288, 65536, 1, 589824, 65536, 1, 655360, 65536, 2, 655361, 131072, 2, 655362, 131072, 2, 655363, 131072, 2, 655364, 131072, 2, 655365, 131072, 2, 6, 131072, 0, 7, 131072, 0, 8, 131072, 0, 9, 196608, 0, 65545, 196608, 1, 131081, 196608, 1, 196617, 196608, 1, 262153, 196608, 1, 327689, 196608, 1, 393225, 196608, 1, 458761, 196608, 1, 524297, 196608, 1, 589833, 196608, 1, 655369, 196608, 2, 655366, 131072, 2, 655367, 131072, 2, 655368, 131072, 2, 589827, 65536, 4, 589826, 393216, 3, 589825, 0, 4, 524289, 0, 4, 458753, 0, 4, 458754, 393216, 3, 458755, 393216, 3, 458756, 0, 4, 524292, 393216, 3, 524291, 0, 4, 524290, 65536, 4, 589828, 0, 4, 589829, 393216, 3, 589830, 393216, 3, 589831, 65536, 4, 589832, 65536, 4, 524296, 393216, 3, 458760, 0, 4, 393224, 65536, 4, 327688, 0, 4, 262152, 0, 4, 196616, 0, 4, 131080, 196608, 4, 131079, 65536, 4, 131078, 131072, 4, 131077, 131072, 4, 131076, 131072, 4, 131075, 196608, 4, 131074, 131072, 4, 196610, 0, 4, 196609, 393216, 3, 131073, 131072, 4, 262145, 393216, 3, 327681, 65536, 4, 393217, 0, 4, 393220, 393216, 3, 393219, 393216, 3, 327682, 65536, 4, 262146, 393216, 3, 262147, 393216, 3, 196611, 65536, 4, 393218, 393216, 3, 327683, 0, 4, 327684, 65536, 4, 262148, 0, 4, 262149, 65536, 4, 196613, 65536, 4, 196612, 0, 4, 196614, 0, 4, 196615, 65536, 4, 262151, 0, 4, 327687, 65536, 4, 393223, 65536, 4, 458759, 393216, 3, 524295, 0, 4, 524294, 65536, 4, 524293, 393216, 3, 458757, 393216, 3, 393221, 0, 4, 327685, 0, 4, 262150, 65536, 4, 327686, 393216, 3, 393222, 0, 4, 458758, 0, 4, 65537, 262144, 3, 65538, 262144, 3, 65539, 262144, 3, 65540, 262144, 3, 65541, 131072, 1, 65542, 262144, 3, 65544, 131072, 1)
+layer_0/tile_data = PackedInt32Array(0, 196608, 4, 65536, 0, 4, 131072, 393216, 3, 196608, 393216, 3, 196609, 0, 4, 196610, 393216, 3, 131074, 0, 4, 65538, 65536, 4, 65537, 0, 4, 1, 65536, 4, 2, 0, 4, 3, 65536, 4, 65539, 393216, 3, 65540, 393216, 3, 65541, 65536, 4, 5, 65536, 4, 4, 393216, 3, 131073, 65536, 4, 262146, 393216, 3, 262147, 0, 4, 196611, 0, 4, 131075, 65536, 4, 131076, 393216, 3, 131077, 262144, 0, 196613, 262144, 1, 262149, 589824, 4, 327685, 131072, 4, 327684, 0, 4, 327683, 65536, 4, 327682, 65536, 4, 327681, 393216, 3, 327680, 393216, 3, 262144, 393216, 3, 262145, 0, 4, 262148, 65536, 4, 196612, 393216, 3, 327686, 196608, 4, 262150, 720896, 4, 196614, 327680, 1, 131078, 327680, 0, 65542, 65536, 4, 6, 131072, 4, 393216, 65536, 4, 393217, 393216, 3, 393218, 393216, 3, 393219, 65536, 4, 393220, 393216, 3, 393221, 0, 4, 393222, 65536, 4, 131071, 196608, 4, 196607, 0, 4, 262143, 65536, 4, 327679, 65536, 4, 393215, 393216, 3, 327687, 0, 4, 65543, 131072, 4, 131079, 0, 4, 196615, 0, 4, 262151, 65536, 4, -65535, 393216, 3, -131071, 393216, 3, -196607, 0, 4, -262143, 0, 4, -327679, 0, 4, -393215, 196608, 4, -393214, 131072, 4, -393213, 0, 4, -393212, 131072, 4, -393211, 131072, 4, -327675, 65536, 4, -262139, 393216, 3, -196603, 393216, 3, -131067, 393216, 3, -65531, 0, 4, -65532, 65536, 4, -65533, 393216, 3, -65534, 65536, 4, -131070, 65536, 4, -196606, 65536, 4, -262142, 0, 4, -327678, 0, 4, -327677, 0, 4, -327676, 0, 4, -262140, 393216, 3, -196604, 393216, 3, -131068, 0, 4, -131069, 393216, 3, -196605, 393216, 3, -262141, 65536, 4, 458753, 65536, 4, 524289, 0, 4, 589825, 0, 4, 655361, 65536, 4, 720897, 393216, 3, 786433, 65536, 4, 786434, 393216, 3, 786435, 0, 4, 786436, 65536, 4, 786437, 393216, 3, 720901, 393216, 3, 655365, 65536, 4, 589829, 65536, 4, 524293, 0, 4, 458757, 0, 4, 458756, 0, 4, 458755, 0, 4, 458754, 393216, 3, 720898, 0, 4, 655362, 65536, 4, 589826, 393216, 3, 524290, 393216, 3, 720899, 393216, 3, 655363, 65536, 4, 589827, 393216, 3, 524291, 65536, 4, 524292, 65536, 4, 589828, 393216, 3, 655364, 393216, 3, 720900, 393216, 3, -458751, 262144, 3, -458750, 327680, 2, -458748, 327680, 2, -458747, 131072, 1, -524287, 131072, 0, -524286, 131072, 0, -524285, 131072, 0, -524284, 131072, 0, -524283, 131072, 0, -524282, 196608, 0, -524288, 65536, 0, -458752, 65536, 1, -393216, 65536, 1, -327680, 65536, 1, -262144, 65536, 1, -196608, 65536, 1, -131072, 327680, 1, -458746, 196608, 1, -393210, 196608, 1, -327674, 196608, 1, -262138, 196608, 1, -196602, 196608, 1, -131066, 262144, 1, -65530, 589824, 4, -65536, 720896, 4, -65529, 262144, 1, -1, 327680, 1, 65535, 720896, 4, -131065, 196608, 0, -65537, 65536, 0, 7, 589824, 4, 131081, 0, 4, 65545, 196608, 4, 65544, 131072, 4, 131080, 65536, 4, 196616, 65536, 4, 262152, 65536, 4, 327688, 393216, 3, 327689, 393216, 3, 262153, 0, 4, 196617, 0, 4, 65546, 196608, 4, 131082, 65536, 4, 196618, 393216, 3, 262154, 65536, 4, 327690, 0, 4, 65547, 196608, 4, 131083, 0, 4, 196619, 0, 4, 262155, 393216, 3, 327691, 0, 4, 65548, 131072, 4, 131084, 65536, 4, 196620, 65536, 4, 262156, 393216, 3, 327692, 393216, 3, 65549, 131072, 4, 131085, 0, 4, 196621, 393216, 3, 262157, 0, 4, 393225, 65536, 4, 458761, 65536, 4, 524297, 0, 4, 524298, 0, 4, 524299, 65536, 4, 524300, 0, 4, 458762, 393216, 3, 393226, 65536, 4, 393227, 0, 4, 458763, 65536, 4, 458764, 0, 4, 458765, 0, 4, 393229, 65536, 4, 327693, 65536, 4, 393228, 65536, 4, 524301, 0, 4, 458766, 0, 4, 393230, 65536, 4, 327694, 0, 4, 262158, 0, 4, 196622, 65536, 4, 131086, 0, 4, 65550, 131072, 4, 589833, 393216, 3, 589834, 393216, 3, 589835, 0, 4, 589836, 0, 4, 589837, 393216, 3, 65551, 196608, 4, 65552, 131072, 4, -65528, 131072, 0, -65527, 131072, 0, -65526, 131072, 0, -65525, 131072, 0, -65524, 131072, 0, -65523, 131072, 0, -65522, 131072, 0, -65521, 131072, 0, -65520, 131072, 0, -65519, 196608, 0, 17, 196608, 1, 65553, 196608, 1, 131089, 196608, 2, 131088, 262144, 0, 131087, 0, 4, 196623, 262144, 0, 262159, 196608, 1, 327695, 196608, 1, 393231, 196608, 1, 458767, 196608, 1, 655373, 131072, 2, 655372, 131072, 2, 655371, 131072, 2, 655370, 131072, 2, 655369, 131072, 2, 655368, 65536, 2, 589832, 65536, 1, 524296, 65536, 1, 458760, 65536, 1, 393224, 327680, 0, 393223, 262144, 0, 458759, 196608, 2, 458758, 262144, 0, 8, 262144, 2, 9, 131072, 1, 10, 262144, 2, 11, 262144, 3, 12, 262144, 2, 13, 262144, 3, 14, 262144, 2, 15, 262144, 3, 16, 262144, 2, 524302, 262144, 0, 589838, 196608, 1, 655374, 196608, 2, 524303, 196608, 2, 196624, 196608, 2, 524294, 196608, 1, 589830, 196608, 1, 655366, 196608, 1, 720902, 196608, 1, 786438, 196608, 1, 851974, 196608, 2, 851973, 131072, 2, 851972, 131072, 2, 851971, 131072, 2, 851970, 131072, 2, 851969, 131072, 2, 851968, 65536, 2, 786432, 65536, 1, 720896, 65536, 1, 655360, 65536, 1, 589824, 65536, 1, 524288, 65536, 1, 458752, 327680, 0, 458751, 327680, 0, 524287, 65536, 2, 458750, 65536, 2, 131070, 65536, 1, 196606, 65536, 1, 262142, 65536, 1, 327678, 65536, 1, 393214, 65536, 1, -2, 65536, 0, 65534, 65536, 1)
 
-[node name="Player" parent="." instance=ExtResource("2_4jwv1")]
-position = Vector2(120, 200)
+[node name="Player" parent="." instance=ExtResource("2_ye651")]
+position = Vector2(120, 840)
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 color = Color(0, 0, 0, 1)
 
-[node name="HUD" parent="." instance=ExtResource("3_rfaky")]
+[node name="HUD" parent="." instance=ExtResource("3_qdkxg")]
 
 [node name="Traps" type="Node2D" parent="."]
 position = Vector2(40, 40)
 
-[node name="Trap" parent="Traps" instance=ExtResource("4_4gh8w")]
-position = Vector2(480, 160)
+[node name="Trap" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(560, 240)
 
-[node name="Trap2" parent="Traps" instance=ExtResource("4_4gh8w")]
+[node name="Trap2" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(560, 160)
+
+[node name="Trap3" parent="Traps" instance=ExtResource("4_n6ndl")]
 position = Vector2(640, 160)
 
-[node name="Trap3" parent="Traps" instance=ExtResource("4_4gh8w")]
-position = Vector2(480, 240)
-
-[node name="Trap4" parent="Traps" instance=ExtResource("4_4gh8w")]
-position = Vector2(480, 320)
-
-[node name="Trap5" parent="Traps" instance=ExtResource("4_4gh8w")]
+[node name="Trap4" parent="Traps" instance=ExtResource("4_n6ndl")]
 position = Vector2(560, 320)
 
-[node name="Trap6" parent="Traps" instance=ExtResource("4_4gh8w")]
-position = Vector2(560, 400)
+[node name="Trap6" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(720, 160)
 
-[node name="Trap7" parent="Traps" instance=ExtResource("4_4gh8w")]
-position = Vector2(480, 400)
+[node name="Trap7" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(800, 160)
 
-[node name="Trap8" parent="Traps" instance=ExtResource("4_4gh8w")]
-position = Vector2(560, 560)
+[node name="Trap8" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(880, 160)
 
-[node name="Trap9" parent="Traps" instance=ExtResource("4_4gh8w")]
-position = Vector2(640, 560)
+[node name="Trap9" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(960, 160)
 
-[node name="Trap10" parent="Traps" instance=ExtResource("4_4gh8w")]
-position = Vector2(640, 640)
+[node name="Trap10" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(1040, 160)
 
-[node name="Trap11" parent="Traps" instance=ExtResource("4_4gh8w")]
-position = Vector2(400, 640)
+[node name="Trap11" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(1040, 240)
 
-[node name="Trap12" parent="Traps" instance=ExtResource("4_4gh8w")]
-position = Vector2(560, 640)
+[node name="Trap12" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(1040, 320)
 
-[node name="Trap13" parent="Traps" instance=ExtResource("4_4gh8w")]
-position = Vector2(400, 560)
+[node name="Trap13" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(640, 320)
 
-[node name="Trap14" parent="Traps" instance=ExtResource("4_4gh8w")]
-position = Vector2(400, 480)
+[node name="Trap14" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(720, 320)
 
-[node name="Trap15" parent="Traps" instance=ExtResource("4_4gh8w")]
-position = Vector2(400, 400)
+[node name="Trap15" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(800, 320)
 
-[node name="Trap16" parent="Traps" instance=ExtResource("4_4gh8w")]
-position = Vector2(400, 320)
+[node name="Trap16" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(880, 320)
 
-[node name="Trap17" parent="Traps" instance=ExtResource("4_4gh8w")]
-position = Vector2(400, 240)
+[node name="Trap17" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(880, 400)
 
-[node name="Trap18" parent="Traps" instance=ExtResource("4_4gh8w")]
-position = Vector2(400, 160)
+[node name="Trap18" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(880, 480)
 
-[node name="Torch" parent="." instance=ExtResource("8_d6m71")]
-position = Vector2(280, 360)
+[node name="Trap19" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(1040, 480)
 
-[node name="Light Trigger" parent="." instance=ExtResource("6_80vcr")]
-position = Vector2(680, 760)
+[node name="Trap20" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(1040, 400)
 
-[node name="Trap" parent="." groups=["light_trigger_group"] instance=ExtResource("4_4gh8w")]
-position = Vector2(520, 680)
+[node name="Trap21" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(880, 560)
 
-[node name="Door" parent="." instance=ExtResource("7_fmcl7")]
-position = Vector2(600, 120)
-next_scene = ExtResource("8_6x61o")
+[node name="Trap22" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(880, 640)
+
+[node name="Trap23" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(960, 640)
+
+[node name="Trap24" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(1040, 640)
+
+[node name="Trap25" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(880, 640)
+
+[node name="Trap26" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(80, -80)
+
+[node name="Trap27" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(160, -80)
+
+[node name="Trap30" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(160, -160)
+
+[node name="Trap31" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(160, -240)
+
+[node name="Trap33" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(320, -240)
+
+[node name="Trap34" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(240, -240)
+
+[node name="Trap36" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(320, -480)
+
+[node name="Trap37" parent="Traps" instance=ExtResource("4_n6ndl")]
+position = Vector2(240, -400)
+
+[node name="Torch" parent="." instance=ExtResource("5_t22fy")]
+position = Vector2(360, 920)
+
+[node name="Key" parent="." instance=ExtResource("6_u01ep")]
+position = Vector2(680, 280)
+
+[node name="Trap" parent="." groups=["light_trigger_group"] instance=ExtResource("4_n6ndl")]
+position = Vector2(1160, 200)
+
+[node name="Light Trigger" parent="." instance=ExtResource("6_lkdup")]
+position = Vector2(1320, 120)
+
+[node name="Ghost" parent="." instance=ExtResource("8_d4rsj")]
+position = Vector2(-40, 200)
+
+[node name="Ghost2" parent="." instance=ExtResource("8_d4rsj")]
+position = Vector2(120, 680)
+dir = Vector2(-1, 2.08165e-12)
+
+[node name="Ghost3" parent="." instance=ExtResource("8_d4rsj")]
+position = Vector2(360, 360)
+dir = Vector2(-1, 2.08165e-12)
+
+[node name="Closed Door" parent="." instance=ExtResource("9_daajg")]
+position = Vector2(280, -520)
+next_scene = ExtResource("8_5kr4b")
